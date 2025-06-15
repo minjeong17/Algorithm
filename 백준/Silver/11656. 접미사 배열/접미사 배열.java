@@ -10,10 +10,8 @@ public class Main {
 
         StringBuilder sb = new StringBuilder();
         String[] arr = new String[input.length()];
-        for (int i = input.length()-1, idx = 0; i >= 0; i--) {
-            sb.append(input.charAt(i));
-            arr[idx++] = sb.reverse().toString();
-            sb.reverse();
+        for (int i = 0; i < input.length(); i++) {
+            arr[i] = input.substring(i);
         }
 
         Arrays.sort(arr, (o1, o2) -> {

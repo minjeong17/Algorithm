@@ -18,25 +18,20 @@ public class Main {
 		else {
 			int frontIdx = 0; int rearIdx = 1;
 			int ans = Integer.MIN_VALUE;
-			Queue<Integer> q = new LinkedList<>();
 			Map<Integer, Integer> cntMap = new HashMap<>();
-			q.add(arr[0]); q.add(arr[1]);
 			cntMap.put(arr[0], cntMap.getOrDefault(arr[0], 0) + 1);
 			cntMap.put(arr[1], cntMap.getOrDefault(arr[1], 0) + 1);
 
-			while (rearIdx <= N) {
-				int cnt = q.size();
+			while (rearIdx < N) {
 				if (cntMap.size() <= 2) {
-					ans = Integer.max(ans, cnt);
+					ans = Integer.max(ans, rearIdx-frontIdx+1);
 					rearIdx++;
 					if (rearIdx < N) {
 						int next = arr[rearIdx];
-						q.add(next);
 						cntMap.put(next, cntMap.getOrDefault(next, 0) + 1);
 					}
 				} else {
-					frontIdx++;
-					int prev = q.poll();
+					int prev = arr[frontIdx++];
 					if (cntMap.get(prev) == 1) {
 						cntMap.remove(prev);
 					} else {

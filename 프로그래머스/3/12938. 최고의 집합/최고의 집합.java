@@ -11,7 +11,7 @@ class Solution {
         
         Arrays.fill(answer, n1);
         for (int i = 0; i < n2; i++) {
-            answer[n - i - 1] = n1 + 1;
+            answer[n - i - 1]++;
         }
         
         return answer;

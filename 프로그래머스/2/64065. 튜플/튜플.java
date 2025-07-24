@@ -17,9 +17,12 @@ class Solution {
                 }
             }
         }
+        System.out.println(numCnt);
         
         List<Map.Entry<Integer, Integer>> list = new ArrayList<>(numCnt.entrySet());
+        System.out.println(list);
         list.sort(Collections.reverseOrder(Map.Entry.comparingByValue()));
+        System.out.println(list);
         
         int[] answer = new int[numCnt.size()];
         int idx = 0;

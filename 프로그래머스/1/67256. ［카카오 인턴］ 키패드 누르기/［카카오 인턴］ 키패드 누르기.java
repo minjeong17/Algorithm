@@ -15,11 +15,11 @@ class Solution {
         for (int n : numbers) {
             if (n == 1 || n == 4 || n == 7) {
                 answer.append('L');
-                left[0] = n / 3;
+                left[0] = numPos.get(n)[0];
                 left[1] = 0;
             } else if (n == 3 || n == 6 || n == 9) {
                 answer.append('R');
-                right[0] = (n - 3) / 3;
+                right[0] = numPos.get(n)[0];
                 right[1] = 2;
             } else {
                 int[] pos = numPos.get(n);

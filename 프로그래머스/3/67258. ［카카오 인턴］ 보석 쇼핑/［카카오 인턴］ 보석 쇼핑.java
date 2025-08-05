@@ -3,42 +3,38 @@ import java.util.*;
 class Solution {
     public int[] solution(String[] gems) {
         int[] answer = new int[2];
+        Set<String> set = new TreeSet<>();
         
-        Set<String> gemType = new HashSet<>();
-        for (String g : gems) gemType.add(g);
+        for(String str : gems){
+            set.add(str);
+        }
         
-        if (gemType.size() == 1) return new int[] {1, 1};
-        
-        Map<String, Integer> gemCnt = new HashMap<>();
-        
+        Map<String, Integer> map = new HashMap<>();
+        map.put(gems[0], 1);
         int left = 0;
         int right = 0;
-        int resLen = Integer.MAX_VALUE;
-        gemCnt.put(gems[0], 1);
-        while (left <= right) {
-            if(left >= gems.length || right >= gems.length) break;
-            
-            if (gemCnt.size() == gemType.size()) { // 보석을 종류 별로 포함하고 있음
-                if (right - left < resLen) {
-                    resLen = right - left;
-                    answer[0] = left + 1;
-                    answer[1] = right + 1;
+        while(left < gems.length){
+            if(map.size() < set.size()){
+                right++;
+                if (right == gems.length) break;
+                map.put(gems[right], map.getOrDefault(gems[right], 0) + 1);
+            } else {
+                if(answer[1] == 0 && answer[0] == 0) {
+                    answer[1] = right+1;
+                    answer[0] = left+1;
                 }
-                
-                if (gemCnt.get(gems[left]) == 1) gemCnt.remove(gems[left]);
-                else gemCnt.put(gems[left], gemCnt.get(gems[left])-1);
+                if(right - left < answer[1] - answer[0]) {
+                    answer[1] = right+1;
+                    answer[0] = left+1;
+                }
+                if(map.get(gems[left]) == 1) map.remove(gems[left]);
+                else {
+                    map.put(gems[left], map.getOrDefault(gems[left], 0) - 1);
+                }
                 left++;
-                
-                
-            } else { // 보석 덜 포함
-                if (right + 1 < gems.length) {
-                    right++;
-                    gemCnt.put(gems[right], gemCnt.getOrDefault(gems[right], 0) + 1);
-                } else break;
-                
             }
-            
         }
+        
         
         return answer;
     }

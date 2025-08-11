@@ -1,56 +1,66 @@
 import java.util.*;
 
 class Solution {
-    
-    // 상우하좌
+    boolean[][]  visited;
+    Queue<int[]> q;
     int[] dr = {-1, 0, 1, 0};
     int[] dc = {0, 1, 0, -1};
+    String[] pplaces;
     
     public int[] solution(String[][] places) {
-        int[] answer = new int[5];
         
-        for (int i = 0; i < 5; i++) {
-            if (check(places[i])) answer[i] = 1;
+        int[] answer = new int[5];
+        for(int i=0; i<5; i++) {
+            pplaces = places[i];
+            boolean flag = true;
+            outer:for(int r=0;r<5;r++){
+                for(int c=0;c<5;c++){
+                    if(pplaces[r].charAt(c)=='P') {
+                        visited = new boolean[5][5];
+                        q = new LinkedList<>();
+                        if (bfs(r, c) == 0) {
+                            flag = false;
+                            break outer;
+                        }
+                    }
+                }
+            }
+            if (flag) answer[i] = 1;
+            else answer[i] = 0;
+            // answer[i] = bfs();
         }
         
         return answer;
     }
     
-    public boolean check(String[] place) {
+    public int bfs(int r, int c) {
+        q.add(new int[] {r, c});
+        int dist = 0;
         
-        char[][] p = new char[5][5];
-        for(int i = 0; i < 5; i++) {
-            p[i] = place[i].toCharArray();
-        }
-        
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 5; j++) {
-                if (p[i][j] == 'P') {
-                    for (int d = 0; d < 4; d++) {
-                        int nr = i + dr[d];
-                        int nc = j + dc[d];
-                        
-                        if (nr < 0 || nr >= 5 || nc < 0 || nc >= 5) continue;
-                        
-                        if (p[nr][nc] == 'X') continue;
-                        else if (p[nr][nc] == 'P') return false;
-                        else {
-                            for (int dd = 0; dd < 4; dd++) {
-                                if (dd == (d + 2) % 4) continue;
-                                
-                                int nnr = nr + dr[dd];
-                                int nnc = nc + dc[dd];
-                                
-                                if (nnr < 0 || nnr >= 5 || nnc < 0 || nnc >= 5) continue;
-                                if (p[nnr][nnc] == 'P') return false;
-                            }
-                        }
-                    }
-
+        while(!q.isEmpty()){
+            
+            if (dist == 2) return 1;
+            
+            int size = q.size();
+            for(int i=0;i<size;i++){
+                int[] curr = q.poll();
+                visited[curr[0]][curr[1]] = true;
+                
+                for(int d=0; d<4; d++){
+                    int nr = curr[0] + dr[d];
+                    int nc = curr[1] + dc[d];
+                    if(nr < 0 || nr >= 5 || nc < 0 || nc >= 5) continue;
+                    
+                    if(visited[nr][nc]) continue;
+                    if(pplaces[nr].charAt(nc)=='X') continue;
+                    if(pplaces[nr].charAt(nc)=='P') return 0;
+                    
+                    q.add(new int[] {nr, nc});
+                    visited[nr][nc] = true;
                 }
             }
+            dist++;
         }
-        
-        return true;
+        return 1;
     }
 }

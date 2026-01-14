@@ -8,9 +8,9 @@ public class 부분집합 {
 
     public static void main(String[] args) {
         // 비트마스킹
-        for (int i = 0; i < (1<<N); i++) {
+        for (int i = 0; i < (1 << N); i++) {
             for (int j = 0; j < N; j++) {
-                if ((i & (1<<j)) != 0) {
+                if ((i & (1 << j)) != 0) {
                     System.out.print(nums[j] + " ");
                 }
             }

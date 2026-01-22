@@ -14,10 +14,7 @@ class Main {
             
             int cnt = 0;
             for (int i = N; i <= M; i++) {
-                char[] nums = String.valueOf(i).toCharArray();
-                for (char n : nums) {
-                    if (n == '0') cnt++;
-                }
+                cnt += cntZero(i);
             }
             
             ans.append(cnt);
@@ -25,5 +22,19 @@ class Main {
         }
         
         System.out.println(ans.toString());
+    }
+    
+    public static int cntZero(int n) {
+        if (n == 0) return 1;
+        
+        int count = 0;
+        while (n > 0) {
+            if (n % 10 == 0) {
+                count++;
+            }
+            n /= 10;
+        }
+        
+        return count;
     }
 }

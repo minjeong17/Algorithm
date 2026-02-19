@@ -1,0 +1,13 @@
+SELECT D.ID,
+       (CASE
+            WHEN D.R <= D.MAX_ID * 0.25 THEN "LOW"
+            WHEN D.R <= D.MAX_ID * 0.5 THEN "MEDIUM"
+            WHEN D.R <= D.MAX_ID * 0.75 THEN "HIGH"
+            ELSE "CRITICAL"
+       END) AS COLONY_NAME
+FROM (
+    SELECT ID, 
+          ROW_NUMBER() OVER (ORDER BY SIZE_OF_COLONY) AS R,
+          MAX(ID) OVER() AS MAX_ID
+    FROM ECOLI_DATA) AS D
+ORDER BY D.ID;

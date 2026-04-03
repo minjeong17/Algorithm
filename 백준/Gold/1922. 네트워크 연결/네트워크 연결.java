@@ -4,10 +4,12 @@ import java.util.*;
 public class Main {
     
     static class Edge implements Comparable<Edge> {
+        int from;
         int to;
         int weight;
         
-        public Edge(int to, int weight) {
+        public Edge(int from, int to, int weight) {
+            this.from = from;
             this.to = to;
             this.weight = weight;
         }
@@ -18,49 +20,60 @@ public class Main {
         }
     }
     
+    static int N;
+    static int[] p;
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         
-        int N = Integer.parseInt(br.readLine());
+        N = Integer.parseInt(br.readLine());
         int M = Integer.parseInt(br.readLine());
         
-        List<Edge>[] adj = new ArrayList[N+1];
-        for (int i = 1; i <= N; i++) {
-            adj[i] = new ArrayList<>();
-        }
-        
+        Edge[] edges = new Edge[M];
         for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());
             int from = Integer.parseInt(st.nextToken());
             int to = Integer.parseInt(st.nextToken());
             int weight = Integer.parseInt(st.nextToken());
             
-            adj[from].add(new Edge(to, weight));
-            if (from != to) adj[to].add(new Edge(from, weight));
+            edges[i] = new Edge(from, to, weight);
         }
-                
-        PriorityQueue<Edge> pq = new PriorityQueue<>();
-        boolean[] visited = new boolean[N+1];
-        pq.add(new Edge(1, 0));
+        
+        Arrays.sort(edges);
+        
+        makeSet();
+        
         int pick = 0;
         int ans = 0;
-        
-        while (pick < N && !pq.isEmpty()) {
-            Edge e = pq.poll();
-            if (visited[e.to]) continue;
-            
-            ans += e.weight;
-            visited[e.to] = true;
-            pick++;
-            
-            for (Edge ed : adj[e.to]) {
-                if (!visited[ed.to]) {
-                    pq.add(ed);
-                }
+        for (Edge e : edges) {
+            if (unionSet(e.from, e.to)) {
+                ans += e.weight;
+                pick++;
+                if (pick == N-1) break;
             }
         }
         
         System.out.println(ans);
+    }
+    
+    public static void makeSet() {
+        p = new int[N+1];
+        for (int i = 1; i <= N; i++) {
+            p[i] = i;
+        }
+    }
+    
+    public static int find(int n) {
+        if (n == p[n]) return n;
+        return p[n] = find(p[n]);
+    }
+    
+    public static boolean unionSet(int n1, int n2) {
+        n1 = find(n1);
+        n2 = find(n2);
+        if (n1 == n2) return false;
+        
+        p[n1] = n2;
+        return true;
     }
 }

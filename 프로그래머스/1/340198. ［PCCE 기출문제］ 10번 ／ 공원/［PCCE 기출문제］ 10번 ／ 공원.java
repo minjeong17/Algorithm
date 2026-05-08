@@ -1,29 +1,41 @@
 import java.util.*;
 
 class Solution {
+    public String[][] park;
     public int solution(int[] mats, String[][] park) {
+        this.park = park;
         
-        int lenX = park.length;
-        int lenY = park[0].length;
-        int[][] sumArr = new int[lenX+1][lenY+1];
-        for (int i = 1; i <= lenX; i++) {
-            for (int j = 1; j <= lenY; j++) {
-                sumArr[i][j] = sumArr[i-1][j] + sumArr[i][j-1] - sumArr[i-1][j-1];
-                if ("-1".equals(park[i-1][j-1])) sumArr[i][j] += 1;
-            }
-        }
+        int answer = -1;
         
         Arrays.sort(mats);
-        for (int m = mats.length-1; m >= 0; m--) {
-            int matLen = mats[m];
-            for (int i = matLen; i <= lenX; i++) {
-                for (int j = matLen; j <= lenY; j++) {
-                    int tmp = sumArr[i][j] - (sumArr[i-matLen][j] + sumArr[i][j-matLen] - sumArr[i-matLen][j-matLen]);
-                    if (tmp == matLen*matLen) return matLen;
+        
+        int parkR = park.length;
+        int parkC = park[0].length;
+        outer:
+        for (int i = mats.length - 1; i >= 0; i--) {
+            int len = mats[i];
+            for (int r = 0; r <= parkR - len; r++) {
+                for (int c = 0; c <= parkC - len; c++) {
+                    if (park[r][c].equals("-1") && park[r+len-1][c+len-1].equals("-1")) {
+                        if (check(r, c, len)) {
+                            answer = len;
+                            break outer;
+                        }
+                    }
                 }
             }
         }
         
-        return -1;
+        return answer;
+    }
+    
+    public boolean check(int r, int c, int len) {
+        for (int i = r; i < r + len; i++) {            
+            for (int j = c; j < c + len; j++) {
+                if (!park[i][j].equals("-1")) return false;
+            } 
+        }
+        
+        return true;
     }
 }

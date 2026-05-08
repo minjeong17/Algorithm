@@ -3,23 +3,32 @@ import java.util.*;
 class Solution {
     public int[][] solution(int[][] data, String ext, int val_ext, String sort_by) {
         
-        Map<String, Integer> extIdx = new HashMap<>();
-        extIdx.put("code", 0); extIdx.put("date", 1);
-        extIdx.put("maximum", 2); extIdx.put("remain", 3);
+        List<int[]> pick = new ArrayList<>();
         
-        List<int[]> processedData = new ArrayList<>();
-        int idx = extIdx.get(ext);
+        int idx = -1;
+        if (ext.equals("code")) idx = 0;
+        else if (ext.equals("date")) idx = 1;
+        else if (ext.equals("maximum")) idx = 2;
+        else idx = 3;
+        
         for (int[] d : data) {
-            if (d[idx] < val_ext) processedData.add(d);
+            if (d[idx] < val_ext) pick.add(d);
         }
         
-        int[][] answer = new int[processedData.size()][4];
-        for (int i = 0; i < processedData.size(); i++) {
-            answer[i] = processedData.get(i);
+        int[][] answer = new int[pick.size()][4];
+        for (int i = 0; i < pick.size(); i++) {
+            answer[i] = pick.get(i);
         }
         
-        int sortIdx = extIdx.get(sort_by);
-        Arrays.sort(answer, (o1, o2) -> o1[sortIdx] - o2[sortIdx]);
+        
+        Arrays.sort(answer, (o1, o2) -> {
+            int i;
+            if (sort_by.equals("code")) i = 0;
+            else if (sort_by.equals("date")) i = 1;
+            else if (sort_by.equals("maximum")) i = 2;
+            else i = 3;
+            return o1[i] - o2[i];
+        });
         
         return answer;
     }

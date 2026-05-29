@@ -11,6 +11,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: leetcode-move-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   move-files:
     if: github.actor != 'github-actions[bot]'
@@ -20,7 +24,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
         with:
+          ref: ${{ github.ref_name }}
           fetch-depth: 0
+
+      - name: Sync latest branch
+        run: |
+          git pull --rebase origin "${{ github.ref_name }}"
 
       - name: Move LeetCode solutions
         run: |
@@ -28,26 +37,28 @@ jobs:
           ls -la
 
           mkdir -p LeetCode
-
           shopt -s nullglob
 
           found=0
+
           for d in [0-9][0-9][0-9][0-9]-*/; do
             dir="${d%/}"
+
             echo "Moving directory: $dir"
 
-            # 이미 같은 문제가 LeetCode 폴더 안에 있으면 덮어쓰기
             rm -rf "LeetCode/$dir"
             mv "$dir" "LeetCode/"
 
             found=1
           done
 
-          if [ $found -eq 0 ]; then
+          if [ "$found" -eq 0 ]; then
             echo "No matching directories found to move"
           fi
 
       - name: Commit & Push changes
+        env:
+          BRANCH_NAME: ${{ github.ref_name }}
         run: |
           if git status --porcelain | grep .; then
             git config --global user.name 'github-actions[bot]'
@@ -55,7 +66,21 @@ jobs:
 
             git add -A
             git commit -m "chore: move LeetCode solutions to LeetCode folder"
-            git push origin HEAD:${{ github.ref_name }}
+
+            for i in 1 2 3; do
+              git pull --rebase origin "$BRANCH_NAME"
+
+              if git push origin "HEAD:$BRANCH_NAME"; then
+                echo "Push succeeded"
+                exit 0
+              fi
+
+              echo "Push failed. Retrying... ($i/3)"
+              sleep 3
+            done
+
+            echo "Push failed after 3 attempts"
+            exit 1
           else
             echo "No changes to commit"
           fi

@@ -1,54 +1,31 @@
 -- 코드를 입력하세요
 SELECT HOUR, COUNT(DATETIME) AS COUNT
  FROM ANIMAL_OUTS AS A
- RIGHT JOIN (SELECT 0 AS HOUR
-         FROM DUAL
-         UNION ALL
-        SELECT 1 FROM DUAL
-         UNION ALL
-        SELECT 2 FROM DUAL
-         UNION ALL
-        SELECT 3 FROM DUAL
-         UNION ALL
-        SELECT 4 FROM DUAL
-         UNION ALL
-        SELECT 5 FROM DUAL
-         UNION ALL
-        SELECT 6 FROM DUAL
-         UNION ALL
-        SELECT 7 FROM DUAL
-         UNION ALL
-        SELECT 8 FROM DUAL
-         UNION ALL
-        SELECT 9 FROM DUAL
-         UNION ALL
-        SELECT 10 FROM DUAL
-         UNION ALL
-        SELECT 11 FROM DUAL
-         UNION ALL
-        SELECT 12 FROM DUAL
-         UNION ALL
-        SELECT 13 FROM DUAL
-         UNION ALL
-        SELECT 14 FROM DUAL
-         UNION ALL
-        SELECT 15 FROM DUAL
-         UNION ALL
-        SELECT 16 FROM DUAL
-         UNION ALL
-        SELECT 17 FROM DUAL
-         UNION ALL
-        SELECT 18 FROM DUAL
-         UNION ALL
-        SELECT 19 FROM DUAL
-         UNION ALL
-        SELECT 20 FROM DUAL
-         UNION ALL
-        SELECT 21 FROM DUAL
-         UNION ALL
-        SELECT 22 FROM DUAL
-         UNION ALL
-        SELECT 23 FROM DUAL) J ON HOUR(DATETIME) = J.HOUR
+ RIGHT JOIN (SELECT 0 AS HOUR UNION ALL
+             SELECT 1 UNION ALL
+             SELECT 2 UNION ALL
+             SELECT 3 UNION ALL
+             SELECT 4 UNION ALL
+             SELECT 5 UNION ALL
+             SELECT 6 UNION ALL
+             SELECT 7 UNION ALL
+             SELECT 8 UNION ALL
+             SELECT 9 UNION ALL
+             SELECT 10 UNION ALL
+             SELECT 11 UNION ALL
+             SELECT 12 UNION ALL
+             SELECT 13 UNION ALL
+             SELECT 14 UNION ALL
+             SELECT 15 UNION ALL
+             SELECT 16 UNION ALL
+             SELECT 17 UNION ALL
+             SELECT 18 UNION ALL
+             SELECT 19 UNION ALL
+             SELECT 20 UNION ALL
+             SELECT 21 UNION ALL
+             SELECT 22 UNION ALL
+             SELECT 23
+            ) J ON HOUR(DATETIME) = J.HOUR
  GROUP BY HOUR
  ORDER BY HOUR
 ;

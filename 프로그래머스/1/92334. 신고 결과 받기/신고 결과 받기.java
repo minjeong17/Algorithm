@@ -2,31 +2,38 @@ import java.util.*;
 
 class Solution {
     public int[] solution(String[] id_list, String[] report, int k) {
+        int[] answer = new int[id_list.length];
         
-        Map<String, Integer> idIdx = new HashMap<>();
-        Map<String, Integer> repCnt = new HashMap<>();
-        Map<String, Set<String>> userReports = new HashMap<>();
-        
+        Map<String, Integer> idIdx = new HashMap<>(); // id의 인덱스
         for (int i = 0; i < id_list.length; i++) {
-            String id = id_list[i];
-            idIdx.put(id, i);
-            repCnt.put(id, 0);
-            userReports.put(id, new HashSet<>());
+            idIdx.put(id_list[i], i);
         }
         
-        for (String rep : report) {
-            String[] r  = rep.split(" ");
-            if (!userReports.get(r[1]).contains(r[0])) {
-                repCnt.put(r[1], repCnt.get(r[1]) + 1);
-                userReports.get(r[1]).add(r[0]);
+        Map<String, Integer> reportCnt = new HashMap<>(); // id가 신고 당한 횟수
+        Map<String, Set<String>> whoReport = new HashMap<>(); // id를 누가 신고했는지
+        for (String r : report) {
+            String[] parsing = r.split(" ");
+            
+            if (!whoReport.containsKey(parsing[1]) || !whoReport.get(parsing[1]).contains(parsing[0]))
+                reportCnt.put(parsing[1], reportCnt.getOrDefault(parsing[1], 0) + 1);
+            
+            if (whoReport.containsKey(parsing[1])) {
+                Set<String> tmp = whoReport.get(parsing[1]);
+                tmp.add(parsing[0]);
+                whoReport.put(parsing[1], tmp);
+            } else {
+                Set<String> tmp = new HashSet<>();
+                tmp.add(parsing[0]);
+                whoReport.put(parsing[1], tmp);
             }
         }
         
-        int[] answer = new int[id_list.length];
-        for (String id : repCnt.keySet()) {
-            if (repCnt.get(id) >= k) {
-                for (String i : userReports.get(id)) {
-                    answer[idIdx.get(i)]++;
+        for (String id : reportCnt.keySet()) {
+            if (reportCnt.get(id) >= k) {
+                Set<String> repId = whoReport.get(id);
+                for (String r : repId) {
+                    int idx = idIdx.get(r);
+                    answer[idx]++;
                 }
             }
         }

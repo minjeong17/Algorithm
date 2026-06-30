@@ -2,27 +2,25 @@ import java.util.*;
 
 class Solution {
     public int solution(int[] priorities, int location) {
+        int answer = 0;
         
+        PriorityQueue<Integer> pq = new PriorityQueue<>((o1, o2) -> o2 - o1);
         Queue<int[]> q = new LinkedList<>();
+        
         for (int i = 0; i < priorities.length; i++) {
+            pq.add(priorities[i]);
             q.add(new int[] {priorities[i], i});
         }
         
-        Arrays.sort(priorities);
-        
-        int answer = 0;
-        int idx = priorities.length - 1;
         while (!q.isEmpty()) {
-            int[] curr = q.poll();
+            int[] process = q.poll();
             
-            if (curr[0] == priorities[idx]) {
-                if (curr[1] == location) return answer + 1;
-                else {
-                    answer++;
-                    idx--;
-                }
+            if (process[0] == pq.peek()) {
+                answer++;
+                if (process[1] == location) break;
+                pq.poll();
             } else {
-                q.add(curr);
+                q.add(process);
             }
         }
         

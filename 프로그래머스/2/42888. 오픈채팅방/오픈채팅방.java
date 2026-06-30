@@ -3,29 +3,32 @@ import java.util.*;
 class Solution {
     public String[] solution(String[] record) {
         
-        Map<String, String> nickname = new HashMap<>();
-        List<String> msg = new ArrayList<>();
-        for (String rec : record) {
-            String[] rc = rec.split(" ");
+        Map<String, String> idToNick = new HashMap<>();
+        Queue<String[]> messages = new LinkedList<>();
+        
+        for (String r : record) {
+            String[] parsed = r.split(" ");
             
-            if (rc[0].equals("Enter")) {
-                msg.add(rc[1] + " 들어왔습니다.");
-                nickname.put(rc[1], rc[2]);
-            } else if (rc[0].equals("Leave")) {
-                msg.add(rc[1] + " 나갔습니다.");
+            if ("Enter".equals(parsed[0])) {
+                idToNick.put(parsed[1], parsed[2]);
+                messages.add(new String[] {parsed[0], parsed[1]});
+            } else if ("Leave".equals(parsed[0])) {
+                messages.add(new String[] {parsed[0], parsed[1]});
             } else {
-                nickname.put(rc[1], rc[2]);
+                idToNick.put(parsed[1], parsed[2]);
             }
         }
         
-        String[] answer = new String[msg.size()];
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < msg.size(); i++) {
-            String[] m = msg.get(i).split(" ");
+        int idx = 0;
+        String[] answer = new String[messages.size()];
+        while (!messages.isEmpty()) {
+            String[] tmp = messages.poll();
             
-            sb.append(nickname.get(m[0])).append("님이 ").append(m[1]);
-            answer[i] = sb.toString();
-            sb.setLength(0);
+            if ("Enter".equals(tmp[0])) {
+                answer[idx++] = idToNick.get(tmp[1]) + "님이 들어왔습니다.";
+            } else {
+                answer[idx++] = idToNick.get(tmp[1]) + "님이 나갔습니다.";
+            }
         }
         
         return answer;

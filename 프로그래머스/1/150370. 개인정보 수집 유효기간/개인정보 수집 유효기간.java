@@ -3,64 +3,34 @@ import java.util.*;
 class Solution {
     public int[] solution(String today, String[] terms, String[] privacies) {
         
-        String[] tmp = today.split("\\.");
-        int[] date = new int[3];
-        for (int i = 0; i < 3; i++) {
-            date[i] = Integer.parseInt(tmp[i]);
+        // String[] tmp = today.split(.);
+        // System.out.println(Arrays.toString(tmp));
+        // System.out.println(today.substring(0, 4) + " " + today.substring(5, 7) + " " + today.substring(8));
+        int todayParsed = Integer.parseInt(today.substring(0, 4)) * 28 * 12
+                          + Integer.parseInt(today.substring(5, 7)) * 28 
+                          + Integer.parseInt(today.substring(8));
+        
+        Map<String, Integer> termMap = new HashMap<>();
+        for (String t : terms) {
+            String[] tmp = t.split(" ");
+            termMap.put(tmp[0], Integer.parseInt(tmp[1]) * 28);
         }
         
-        Map<String, Integer> term = new HashMap<>();
-        for (String str : terms) {
-            tmp = str.split(" ");
-            term.put(tmp[0], Integer.parseInt(tmp[1]));
-        }
-        
-        List<Integer> ans = new ArrayList<>();
+        List<Integer> ansList = new ArrayList<>();
         for (int i = 0; i < privacies.length; i++) {
-            String str = privacies[i];
+            String[] tmp = privacies[i].split(" ");
+            int date = Integer.parseInt(tmp[0].substring(0, 4)) * 28 * 12
+                       + Integer.parseInt(tmp[0].substring(5, 7)) * 28 
+                       + Integer.parseInt(tmp[0].substring(8));
             
-            String tmpp = str.substring(0, 10);
-            tmp = tmpp.split("\\.");
-            int[] getDate = new int[3];
-            for (int ii = 0; ii < 3; ii++) {
-                getDate[ii] = Integer.parseInt(tmp[ii]);
-            }
-
-            String type = str.charAt(str.length()-1)+"";
-            getDate[1] += term.get(type);
-            if (getDate[1] > 12) {
-                int t = getDate[1] / 12;
-                getDate[1] -= 12*t;
-                getDate[0] += t;
-                if (getDate[1] == 0) {
-                    getDate[1] = 12;
-                    getDate[0] -= 1;
-                }
-            } 
-            
-            if (getDate[2] == 1) {
-                getDate[2] = 28;
-                getDate[1] -= 1;
-                if (getDate[1] == 0) {
-                    getDate[1] = 12;
-                    getDate[0] -= 1;
-                }
-            } else {
-                getDate[2] -= 1;
-            }
-            
-            for (int j = 0; j < 3; j++) {
-                if (date[j] > getDate[j]) {
-                    ans.add(i+1);
-                    break;
-                } else if (date[j] < getDate[j]) break;
-            }
+            if (date + termMap.get(tmp[1]) - 1 < todayParsed) ansList.add(i+1);
         }
         
-        int[] answer = new int[ans.size()];
-        for (int i = 0; i < answer.length; i++) {
-            answer[i] = ans.get(i);
+        int[] answer = new int[ansList.size()];
+        for (int i = 0; i < ansList.size(); i++) {
+            answer[i] = ansList.get(i);
         }
+        
         
         return answer;
     }

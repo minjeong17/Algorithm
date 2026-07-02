@@ -4,15 +4,15 @@ class Solution {
     public int solution(String[][] clothes) {
         int answer = 1;
         
-        Map<String, Integer> cnt = new HashMap<>();
+        Map<String, Integer> kind = new HashMap<>();
         for (String[] c : clothes) {
-            cnt.put(c[1], cnt.getOrDefault(c[1], 0) + 1);
+            kind.put(c[1], kind.getOrDefault(c[1], 0) + 1);
         }
         
-        for (String s : cnt.keySet()) {
-            answer *= (cnt.get(s) + 1);
+        for (String k : kind.keySet()) {
+            answer *= kind.get(k) + 1;
         }
         
-        return answer - 1;
+        return answer-1;
     }
 }

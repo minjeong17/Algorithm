@@ -1,31 +1,26 @@
 import java.util.*;
 
 class Solution {
-    
-    int answer, len;
-    List<Integer>[] adj;
+    List<Integer>[] adjList;
     boolean[] visited;
-    
     public int solution(int n, int[][] computers) {
+        int answer = 0;
         
-        answer = 0;
-        len = computers.length;
+        adjList = new ArrayList[n];
+        for (int i = 0; i < n; i++) adjList[i] = new ArrayList<>();
         
-        adj = new ArrayList[len];
-        for (int i = 0; i < len; i++) {
-            adj[i] = new ArrayList<>();
-        }
-        
-        for (int i = 0; i < len; i++) {
-            for (int j = 0; j < len; j++) {
-                if (i != j && computers[i][j] == 1) adj[i].add(j);
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (computers[i][j] == 1) {
+                    adjList[i].add(j);
+                }
             }
         }
         
-        visited = new boolean[len];
-        for (int i = 0; i < len; i++) {
+        visited = new boolean[n];
+        for (int i = 0; i < n; i++) {
             if (!visited[i]) {
-                dfs(i);
+                bfs(i);
                 answer++;
             }
         }
@@ -33,11 +28,18 @@ class Solution {
         return answer;
     }
     
-    public void dfs (int n) {
-        visited[n] = true;
+    public void bfs(int v) {
+        Queue<Integer> q = new LinkedList<>();
+        q.add(v);
+        visited[v] = true;
         
-        for (int v : adj[n]) {
-            if (!visited[v]) dfs(v);
+        while (!q.isEmpty()) {
+            int curr = q.poll();
+            for (int w : adjList[curr]) {
+                if (visited[w]) continue;
+                visited[w] = true;
+                q.add(w);
+            }
         }
     }
 }

@@ -3,35 +3,39 @@ import java.util.*;
 class Solution {
     public int[] solution(int[] answers) {
         
-        int[] std1 = {1, 2, 3, 4, 5};  
-        int[] std2 = {2, 1, 2, 3, 2, 4, 2, 5};
-        int[] std3 = {3, 3, 1, 1, 2, 2, 4, 4, 5, 5};
+        Queue<Integer> s1 = new LinkedList<>();
+        s1.add(1); s1.add(2); s1.add(3); s1.add(4); s1.add(5);
+        Queue<Integer> s2 = new LinkedList<>();
+        s2.add(2); s2.add(1); s2.add(2); s2.add(3); s2.add(2); s2.add(4); s2.add(2); s2.add(5); 
+        Queue<Integer> s3 = new LinkedList<>();
+        s3.add(3); s3.add(3); s3.add(1); s3.add(1); s3.add(2); s3.add(2); s3.add(4); s3.add(4); s3.add(5); s3.add(5); 
         
-        int[] ansCnt = new int[4];
-        
-        for (int i = 0; i < answers.length; i++) {
-            int ans = answers[i];
+        int sc1 = 0;
+        int sc2 = 0;
+        int sc3 = 0;
+        for (int a : answers) {
+            int ss1 = s1.poll();
+            int ss2 = s2.poll();
+            int ss3 = s3.poll();
             
-            if (ans == std1[i % 5]) ansCnt[1]++;
-            if (ans == std2[i % 8]) ansCnt[2]++;
-            if (ans == std3[i % 10]) ansCnt[3]++;
+            if (ss1 == a) sc1++;
+            if (ss2 == a) sc2++;
+            if (ss3 == a) sc3++;
+            
+            s1.add(ss1);
+            s2.add(ss2);
+            s3.add(ss3);
         }
         
-        Queue<int[]> q = new LinkedList<>();
-        q.add(new int[] {1, ansCnt[1]});
-        for (int i = 2; i <= 3; i++) {
-            if (q.peek()[1] < ansCnt[i]) {
-                q.poll();
-                q.add(new int[] {i, ansCnt[i]}); 
-            } else if (q.peek()[1] == ansCnt[i]) {
-                q.add(new int[] {i, ansCnt[i]});
-            }
-        }
+        int maxSc = Math.max(sc1, Math.max(sc2, sc3));
+        List<Integer> ansList = new ArrayList<>();
+        if (maxSc == sc1) ansList.add(1);
+        if (maxSc == sc2) ansList.add(2);
+        if (maxSc == sc3) ansList.add(3);
         
-        int[] answer = new int[q.size()];
-        int size = q.size();
-        for (int i = 0; i < size; i++) {
-            answer[i] = q.poll()[0];
+        int[] answer = new int[ansList.size()];
+        for (int i = 0; i < ansList.size(); i++) {
+            answer[i] = ansList.get(i);
         }
         
         return answer;

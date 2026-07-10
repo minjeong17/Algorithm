@@ -4,24 +4,21 @@ class Solution {
     public int solution(int k, int[] tangerine) {
         int answer = 0;
         
-        Map<Integer, Integer> cntFruits = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
         for (int t : tangerine) {
-            cntFruits.put(t, cntFruits.getOrDefault(t, 0) + 1);
+            map.put(t, map.getOrDefault(t, 0) + 1);
         }
         
-        PriorityQueue<int[]> q = new PriorityQueue<>((o1, o2) -> {
-            if (o1[1] == o2[1]) return o1[0] - o2[0];
-            return o2[1] - o1[1];
-        });
-        for (int n : cntFruits.keySet()) {
-            q.add(new int[] {n, cntFruits.get(n)});
+        int[] amount = new int[map.size()];
+        int idx = 0;
+        for (int a : map.keySet()) {
+            amount[idx++] = map.get(a);
         }
+        Arrays.sort(amount);
         
         int sum = 0;
-        while (!q.isEmpty()) {
-            int[] curr = q.poll();
-            
-            sum += curr[1];
+        for (int i = amount.length-1; i >= 0; i--) {
+            sum += amount[i];
             answer++;
             
             if (sum >= k) break;

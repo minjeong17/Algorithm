@@ -5,20 +5,21 @@ class Solution {
         int[] answer = new int[numbers.length];
         Arrays.fill(answer, -1);
         
-        Stack<Integer> stack = new Stack<>();
-        stack.push(numbers[numbers.length-1]);
-        for (int i = numbers.length-2; i >= 0; i--) {
-            while (!stack.isEmpty()) {
-                if (stack.peek() > numbers[i]) {
-                    answer[i] = stack.peek();
-                    stack.push(numbers[i]);
-                    break;
-                } else {
-                    stack.pop();
+        Stack<int[]> stack = new Stack<>();
+        for (int i = 0; i < numbers.length; i++) {
+            int num = numbers[i];
+            
+            if (stack.isEmpty()) {
+                stack.push(new int[] {num, i});
+            } else {
+                if (stack.peek()[0] < num) {
+                    while (!stack.isEmpty() && stack.peek()[0] < num) {
+                        int[] tmp = stack.pop();
+                        answer[tmp[1]] = num;    
+                    }
                 }
+                stack.push(new int[] {num, i});
             }
-            if (stack.isEmpty())
-                stack.push(numbers[i]);
         }
         
         return answer;

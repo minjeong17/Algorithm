@@ -4,30 +4,22 @@ class Solution {
     public int[] solution(int n, String[] words) {
         int[] answer = new int[2];
 
-        Set<String> used = new HashSet<>();
-        Map<Integer, Integer> cnt = new HashMap<>();
+        Set<String> set = new HashSet<>();
+        char last = words[0].charAt(words[0].length()-1);
+        set.add(words[0]);
         
-        char lastCh = words[0].charAt(0);
-        
-        int idx = 0;
-        for (String word : words) {
-            int num = idx++ % n;
-            if (word.charAt(0) != lastCh) {
-                answer[0] = num + 1;
-                answer[1] = cnt.getOrDefault(num, 0) + 1;
+        for (int i = 1; i < words.length; i++) {
+            String word = words[i];
+            if (last != word.charAt(0) || set.contains(word)) {
+                answer[0] = (i + 1) % n == 0 ? n : (i + 1) % n;
+                answer[1] = (int)Math.ceil((i + 1.0) / n);
                 break;
-            } else {
-                if (used.contains(word)) {
-                    answer[0] = num + 1;
-                    answer[1] = cnt.getOrDefault(num, 0) + 1;
-                    break;
-                } else {
-                    cnt.put(num, cnt.getOrDefault(num, 0) + 1);
-                    used.add(word);
-                    lastCh = word.charAt(word.length()-1);
-                }
             }
+            
+            last = word.charAt(word.length()-1);
+            set.add(word);
         }
+        
         
         return answer;
     }

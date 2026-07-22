@@ -1,35 +1,32 @@
+import java.util.*;
+
 class Solution {
     public int[] solution(int[] sequence, int k) {
-        int[] answer = new int[2];
+        int[] answer = {0, sequence.length-1};
         
         int left = 0;
         int right = 0;
         int sum = sequence[0];
-        int len = Integer.MAX_VALUE;
-        while (left < sequence.length) {
-            if (sum > k) {
+        while (left <= right) {
+            if (sum == k) {
+                if (right - left < answer[1] - answer[0]) {
+                    answer[0] = left;
+                    answer[1] = right;
+                } else if (right - left == answer[1] - answer[0]) {
+                    if (left < answer[0]) {
+                        answer[0] = left;
+                        answer[1] = right;
+                    }
+                }
                 sum -= sequence[left];
                 left++;
             } else if (sum < k) {
-                if (right == sequence.length - 1) {
-                    sum -= sequence[left];
-                    left++;
-                } else if (right + 1 <= sequence.length-1) {
-                    right++;
-                    sum += sequence[right];
-                }
+                if (right + 1 == sequence.length) break;
+                sum += sequence[++right];
             } else {
-                if (right - left < len) {
-                    answer[0] = left;
-                    answer[1] = right;
-                    len = right - left;
-                }
-                
-                sum -= sequence[left];
-                left++;
-            }
-            
-            // if (left == sequence.length) break;
+                sum -= sequence[left++];
+                if (left == sequence.length) break;
+            };
         }
         
         return answer;

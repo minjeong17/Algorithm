@@ -1,60 +1,53 @@
 import java.util.*;
 
 class Solution {
-    
-    int[][] dungns;
-    int[][] sel;
+    int[][] dungeons;
+    int len, answer;
+    boolean flag;
     boolean[] visited;
-    int limit;
-    int answer = 0;
-    
+    int[] sel;
     public int solution(int k, int[][] dungeons) {
+        this.dungeons = dungeons;
         
-        dungns = dungeons;
+        answer = 0;
         
-        for (int i = dungeons.length; i >= 1; i--) {
-            sel = new int[i][2];
-            visited = new boolean[dungns.length];
-            limit = k;
-            perm(0, i, k);
-            if (answer != 0) break;
-        }
+        len = dungeons.length;
+        sel = new int[len];
+        visited = new boolean[len];
+        flag = false;
+        perm(0, k);
         
         return answer;
     }
     
-    boolean flag = false;
-    
-    public void perm (int idx, int len, int k) {
-        
+    public void perm(int idx, int k) {
         if (flag) return;
         
         if (idx == len) {
-            if (find(sel, k)) {
-                flag = true;
-                answer = len;
-            }
+            check(sel, k);
+            if (answer == len) flag = true;
             return;
         }
         
-        for (int i = 0; i < dungns.length; i++) {
+        for (int i = 0; i < len; i++) {
             if (!visited[i]) {
                 visited[i] = true;
-                sel[idx] = dungns[i];
-                perm(idx+1, len, k);
+                sel[idx] = i;
+                perm(idx + 1, k);
                 visited[i] = false;
             }
         }
     }
     
-    public boolean find(int[][] sel, int limit) {
-        for (int[] dun : sel) {
-            if (limit < 0) return false;
-            if (dun[0] > limit) return false;
-            else {
-                limit -= dun[1];
-            }
+    public void check(int[] sel, int k) {
+        int cnt = 0;
+        for (int s : sel) {
+            if (k >= dungeons[s][0]) {
+                cnt++;
+                k -= dungeons[s][1];
+            } else break;
         }
-        return true;
-    }
+        
+        answer = Math.max(answer, cnt);
+    } 
 }

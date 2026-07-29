@@ -4,44 +4,37 @@ class Solution {
     public int solution(int storey) {
         int answer = 0;
         
-        String str = storey+"";
-        int[] arr = new int[str.length()];
-        for (int i = 0; i < str.length(); i++) {
-            arr[i] = Integer.parseInt(str.charAt(i)+"");
+        char[] str = Integer.toString(storey).toCharArray();
+        int len = str.length;
+        
+        int[] nums = new int[len];
+        for (int i = 0; i < len; i++) {
+            nums[i] = str[i] - '0';
         }
         
-        for (int i = str.length()-1; i >= 0; i--) {
-            int n = arr[i];
+        for (int i = len - 1; i >= 0; i--) {
+            int n = nums[i];
             
-            if (n == 10) {
-                if (i == 0) {
-                    answer++;
-                } else {
-                    arr[i-1]++;
-                }
-                
-                continue;
-            }
-            
-            if (n < 5) {
+            if (n >= 10) {
+                if (i > 0) nums[i-1]++;
+                else answer++;
+            } else if (n < 5) {
                 answer += n;
-            } else if (n > 5) {
+            } else if (n == 5) {
+                if (i > 0) {
+                    if (nums[i-1] < 5) answer += n;
+                    else {
+                        answer += 10 - n;
+                        nums[i-1]++;
+                    }
+                } else answer += n;
+            } else {
                 answer += 10 - n;
                 
-                if (i == 0) answer++;
-                else arr[i-1]++;
-            } else {
-                if (i == 0) answer += 5;
-                else {
-                    if (arr[i-1] >= 5) {
-                        answer += 10 - n;
-                        arr[i-1]++;
-                    } else {
-                        answer += n;
-                    }
-                }
+                if (i > 0) nums[i-1]++;
+                else answer++;
             }
-        }    
+        }
         
         return answer;
     }

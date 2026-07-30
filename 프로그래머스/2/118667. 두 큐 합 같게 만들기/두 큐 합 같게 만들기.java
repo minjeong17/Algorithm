@@ -6,37 +6,35 @@ class Solution {
         
         Queue<Integer> q1 = new LinkedList<>();
         Queue<Integer> q2 = new LinkedList<>();
-        long sum1 = 0L;
-        long sum2 = 0L;
-        
-        int len = queue1.length;
-        for (int i = 0; i < len; i++) {
-            q1.add(queue1[i]);
-            sum1 += queue1[i];
-            q2.add(queue2[i]);
-            sum2 += queue2[i];
+        long sum1 = 0;
+        long sum2 = 0;
+        for (int q : queue1) {
+            q1.add(q);
+            sum1 += q;
+        }
+        for (int q : queue2) {
+            q2.add(q);
+            sum2 += q;
+        }
+                
+        while (answer <= queue1.length * 3) {
+            if (sum1 > sum2) {
+                int n = q1.poll();
+                sum1 -= n;
+                sum2 += n;
+                q2.add(n);
+                answer++;
+            } else if (sum1 < sum2) {
+                int n = q2.poll();
+                sum2 -= n;
+                sum1 += n;
+                q1.add(n);
+                answer++;
+            }
+            
+            if (sum1 == sum2) return answer;
         }
         
-        if (sum1 == sum2) return 0;
-        
-        while (answer <= len*3) {
-            if (sum1 < sum2) {
-                if (q2.isEmpty()) return -1;
-                int t = q2.poll();
-                sum2 -= t;
-                q1.add(t);
-                sum1 += t;
-                answer++;
-            } else if (sum1 > sum2) {
-                if (q1.isEmpty()) return -1;
-                int t = q1.poll();
-                sum1 -= t;
-                q2.add(t);
-                sum2 += t;
-                answer++;
-            } else break;
-        }
-        
-        return sum1 == sum2 ? answer : -1;
+        return -1;
     }
 }

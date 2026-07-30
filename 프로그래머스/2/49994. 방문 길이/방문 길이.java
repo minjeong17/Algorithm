@@ -3,37 +3,40 @@ import java.util.*;
 class Solution {
     public int solution(String dirs) {
         int answer = 0;
-
+        
         int[] dr = {-1, 1, 0, 0};
-        int[] dc = {0, 0, -1, 1};
-
-        Map<Character, Integer> dir = new HashMap<>();
-        dir.put('U', 0); dir.put('D', 1);
-        dir.put('L', 2); dir.put('R', 3);
+        int[] dc = {0, 0, 1, -1};
         
-        int r = 0, c = 0;
+        Map<Character, Integer> dirMap = new HashMap<>();
+        dirMap.put('U', 0); dirMap.put('D', 1); dirMap.put('R', 2); dirMap.put('L', 3);
         
-        boolean[][][] visited = new boolean[11][11][4];
-        
-        for (int i = 0; i < dirs.length(); i++) {
-            int d = dir.get(dirs.charAt(i));
+        Set<String> visited = new HashSet<>();
+        int startR = 0; int startC = 0;
+        StringBuilder move = new StringBuilder();
+        StringBuilder moveRev = new StringBuilder();
+        for (char c : dirs.toCharArray()) {
+            int d = dirMap.get(c);
+            int endR = startR + dr[d];
+            int endC = startC + dc[d];
             
-            int nr = r + dr[d];
-            int nc = c + dc[d];
+            if (endR < -5 || endR > 5 || endC < -5 || endC > 5) continue;
             
-            if (nr < -5 || nr > 5 || nc < -5 || nc > 5) continue;
-            if (!visited[nr+5][nc+5][d]) {
+            move.append(startR).append(startC).append(endR).append(endC);
+            moveRev.append(endR).append(endC).append(startR).append(startC);
+            String tmp1 = move.toString();
+            String tmp2 = moveRev.toString();
+            if (!visited.contains(tmp1) && !visited.contains(tmp2)) {
                 answer++;
-                visited[nr+5][nc+5][d] = true;
-                if (d == 0) visited[r+5][c+5][1] = true;
-                else if (d == 1) visited[r+5][c+5][0] = true;
-                else if (d == 2) visited[r+5][c+5][3] = true;
-                else visited[r+5][c+5][2] = true;
+                visited.add(tmp1);  
+                visited.add(tmp2);  
             }
             
-            r = nr;
-            c = nc;
+            startR = endR;
+            startC = endC;
+            move.setLength(0);
+            moveRev.setLength(0);
         }
+        
         
         return answer;
     }

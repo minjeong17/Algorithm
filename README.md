@@ -46,4 +46,8 @@
 |  |
 | ------- |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/minjeong17/Algorithm/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
+## Database
+|  |
+| ------- |
+| [0175-combine-two-tables](https://github.com/minjeong17/Algorithm/tree/master/0175-combine-two-tables) |
 <!---LeetCode Topics End-->

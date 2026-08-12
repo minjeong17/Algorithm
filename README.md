@@ -7,6 +7,7 @@
 | [0001-two-sum](https://github.com/minjeong17/Algorithm/tree/master/0001-two-sum) |
 | [0004-median-of-two-sorted-arrays](https://github.com/minjeong17/Algorithm/tree/master/0004-median-of-two-sorted-arrays) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
+| [0056-merge-intervals](https://github.com/minjeong17/Algorithm/tree/master/0056-merge-intervals) |
 ## Hash Table
 |  |
 | ------- |
@@ -71,9 +72,14 @@
 |  |
 | ------- |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
+| [0056-merge-intervals](https://github.com/minjeong17/Algorithm/tree/master/0056-merge-intervals) |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/minjeong17/Algorithm/tree/master/3016-minimum-number-of-pushes-to-type-word-ii) |
 ## Counting
 |  |
 | ------- |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/minjeong17/Algorithm/tree/master/3016-minimum-number-of-pushes-to-type-word-ii) |
+## Quicksort
+|  |
+| ------- |
+| [0056-merge-intervals](https://github.com/minjeong17/Algorithm/tree/master/0056-merge-intervals) |
 <!---LeetCode Topics End-->

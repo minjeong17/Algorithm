@@ -66,6 +66,7 @@
 | [0184-department-highest-salary](https://github.com/minjeong17/Algorithm/tree/master/0184-department-highest-salary) |
 | [0586-customer-placing-the-largest-number-of-orders](https://github.com/minjeong17/Algorithm/tree/master/0586-customer-placing-the-largest-number-of-orders) |
 | [0596-classes-with-at-least-5-students](https://github.com/minjeong17/Algorithm/tree/master/0596-classes-with-at-least-5-students) |
+| [0602-friend-requests-ii-who-has-the-most-friends](https://github.com/minjeong17/Algorithm/tree/master/0602-friend-requests-ii-who-has-the-most-friends) |
 | [0608-tree-node](https://github.com/minjeong17/Algorithm/tree/master/0608-tree-node) |
 | [0620-not-boring-movies](https://github.com/minjeong17/Algorithm/tree/master/0620-not-boring-movies) |
 | [1045-customers-who-bought-all-products](https://github.com/minjeong17/Algorithm/tree/master/1045-customers-who-bought-all-products) |

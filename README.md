@@ -9,6 +9,7 @@
 | [0015-3sum](https://github.com/minjeong17/Algorithm/tree/master/0015-3sum) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/minjeong17/Algorithm/tree/master/0056-merge-intervals) |
+| [0200-number-of-islands](https://github.com/minjeong17/Algorithm/tree/master/0200-number-of-islands) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/minjeong17/Algorithm/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
 ## Hash Table
 |  |
@@ -93,4 +94,20 @@
 |  |
 | ------- |
 | [0015-3sum](https://github.com/minjeong17/Algorithm/tree/master/0015-3sum) |
+## Depth-First Search
+|  |
+| ------- |
+| [0200-number-of-islands](https://github.com/minjeong17/Algorithm/tree/master/0200-number-of-islands) |
+## Breadth-First Search
+|  |
+| ------- |
+| [0200-number-of-islands](https://github.com/minjeong17/Algorithm/tree/master/0200-number-of-islands) |
+## Union-Find
+|  |
+| ------- |
+| [0200-number-of-islands](https://github.com/minjeong17/Algorithm/tree/master/0200-number-of-islands) |
+## Matrix
+|  |
+| ------- |
+| [0200-number-of-islands](https://github.com/minjeong17/Algorithm/tree/master/0200-number-of-islands) |
 <!---LeetCode Topics End-->

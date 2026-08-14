@@ -4,17 +4,17 @@ class Solution {
     public int maximumLengthSubstring(String s) {
         int answer = 0;
 
-        Map<Character, Integer> cntMap = new HashMap<>();
+        int[] cnt = new int[26];
 
         int left = 0;
         for (int right = 0; right < s.length(); right++) {
-            char c = s.charAt(right);
+            int idx = s.charAt(right) - 'a';
 
-            cntMap.put(c, cntMap.getOrDefault(c, 0) + 1);
+            cnt[idx]++;
 
-            while (cntMap.get(c) == 3) {
-                char r = s.charAt(left);
-                cntMap.put(r, cntMap.get(r) - 1);
+            while (cnt[idx] > 2) {
+                int leftIdx = s.charAt(left) - 'a';
+                cnt[leftIdx]--;
 
                 left++;
             }

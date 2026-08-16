@@ -38,6 +38,7 @@
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/minjeong17/Algorithm/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0005-longest-palindromic-substring](https://github.com/minjeong17/Algorithm/tree/master/0005-longest-palindromic-substring) |
 | [0006-zigzag-conversion](https://github.com/minjeong17/Algorithm/tree/master/0006-zigzag-conversion) |
 | [0008-string-to-integer-atoi](https://github.com/minjeong17/Algorithm/tree/master/0008-string-to-integer-atoi) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
@@ -96,6 +97,7 @@
 ## Two Pointers
 |  |
 | ------- |
+| [0005-longest-palindromic-substring](https://github.com/minjeong17/Algorithm/tree/master/0005-longest-palindromic-substring) |
 | [0015-3sum](https://github.com/minjeong17/Algorithm/tree/master/0015-3sum) |
 ## Depth-First Search
 |  |
@@ -113,4 +115,12 @@
 |  |
 | ------- |
 | [0200-number-of-islands](https://github.com/minjeong17/Algorithm/tree/master/0200-number-of-islands) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0005-longest-palindromic-substring](https://github.com/minjeong17/Algorithm/tree/master/0005-longest-palindromic-substring) |
+## Manacher
+|  |
+| ------- |
+| [0005-longest-palindromic-substring](https://github.com/minjeong17/Algorithm/tree/master/0005-longest-palindromic-substring) |
 <!---LeetCode Topics End-->

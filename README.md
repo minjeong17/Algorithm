@@ -40,6 +40,7 @@
 | [0007-reverse-integer](https://github.com/minjeong17/Algorithm/tree/master/0007-reverse-integer) |
 | [0009-palindrome-number](https://github.com/minjeong17/Algorithm/tree/master/0009-palindrome-number) |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/minjeong17/Algorithm/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
+| [3622-check-divisibility-by-digit-sum-and-product](https://github.com/minjeong17/Algorithm/tree/master/3622-check-divisibility-by-digit-sum-and-product) |
 ## Recursion
 |  |
 | ------- |

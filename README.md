@@ -39,6 +39,7 @@
 | [0002-add-two-numbers](https://github.com/minjeong17/Algorithm/tree/master/0002-add-two-numbers) |
 | [0007-reverse-integer](https://github.com/minjeong17/Algorithm/tree/master/0007-reverse-integer) |
 | [0009-palindrome-number](https://github.com/minjeong17/Algorithm/tree/master/0009-palindrome-number) |
+| [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/minjeong17/Algorithm/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
 | [3622-check-divisibility-by-digit-sum-and-product](https://github.com/minjeong17/Algorithm/tree/master/3622-check-divisibility-by-digit-sum-and-product) |
 ## Recursion
@@ -53,6 +54,7 @@
 | [0006-zigzag-conversion](https://github.com/minjeong17/Algorithm/tree/master/0006-zigzag-conversion) |
 | [0008-string-to-integer-atoi](https://github.com/minjeong17/Algorithm/tree/master/0008-string-to-integer-atoi) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
+| [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/minjeong17/Algorithm/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/minjeong17/Algorithm/tree/master/3016-minimum-number-of-pushes-to-type-word-ii) |
 | [3090-maximum-length-substring-with-two-occurrences](https://github.com/minjeong17/Algorithm/tree/master/3090-maximum-length-substring-with-two-occurrences) |
@@ -76,6 +78,7 @@
 | ------- |
 | [0011-container-with-most-water](https://github.com/minjeong17/Algorithm/tree/master/0011-container-with-most-water) |
 | [1386-cinema-seat-allocation](https://github.com/minjeong17/Algorithm/tree/master/1386-cinema-seat-allocation) |
+| [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/minjeong17/Algorithm/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/minjeong17/Algorithm/tree/master/3016-minimum-number-of-pushes-to-type-word-ii) |
 ## Database
@@ -166,4 +169,8 @@
 |  |
 | ------- |
 | [0347-top-k-frequent-elements](https://github.com/minjeong17/Algorithm/tree/master/0347-top-k-frequent-elements) |
+## Game Theory
+|  |
+| ------- |
+| [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
 <!---LeetCode Topics End-->

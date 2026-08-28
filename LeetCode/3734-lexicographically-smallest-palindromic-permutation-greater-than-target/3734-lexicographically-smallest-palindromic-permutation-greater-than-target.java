@@ -63,7 +63,11 @@ class Solution {
         if (answer.length() < len / 2) {
             for (int i = 0; i < 26; i++) {
                 if (sCnt[i] >= 2) {
-                    for (int j = 0; j < sCnt[i] / 2; j++) answer.append((char) (i + 'a'));
+                    int c = sCnt[i] / 2;
+                    for (int j = 0; j < c; j++) {
+                        answer.append((char) (i + 'a'));
+                        sCnt[i] -= 2;
+                    }
                 }
             }
         }

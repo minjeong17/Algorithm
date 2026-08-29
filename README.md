@@ -7,6 +7,7 @@
 | [0001-two-sum](https://github.com/minjeong17/Algorithm/tree/master/0001-two-sum) |
 | [0004-median-of-two-sorted-arrays](https://github.com/minjeong17/Algorithm/tree/master/0004-median-of-two-sorted-arrays) |
 | [0011-container-with-most-water](https://github.com/minjeong17/Algorithm/tree/master/0011-container-with-most-water) |
+| [0014-longest-common-prefix](https://github.com/minjeong17/Algorithm/tree/master/0014-longest-common-prefix) |
 | [0015-3sum](https://github.com/minjeong17/Algorithm/tree/master/0015-3sum) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/minjeong17/Algorithm/tree/master/0056-merge-intervals) |
@@ -59,6 +60,7 @@
 | [0006-zigzag-conversion](https://github.com/minjeong17/Algorithm/tree/master/0006-zigzag-conversion) |
 | [0008-string-to-integer-atoi](https://github.com/minjeong17/Algorithm/tree/master/0008-string-to-integer-atoi) |
 | [0013-roman-to-integer](https://github.com/minjeong17/Algorithm/tree/master/0013-roman-to-integer) |
+| [0014-longest-common-prefix](https://github.com/minjeong17/Algorithm/tree/master/0014-longest-common-prefix) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
 | [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
 | [2904-shortest-and-lexicographically-smallest-beautiful-string](https://github.com/minjeong17/Algorithm/tree/master/2904-shortest-and-lexicographically-smallest-beautiful-string) |
@@ -191,4 +193,8 @@
 | ------- |
 | [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/minjeong17/Algorithm/tree/master/3720-lexicographically-smallest-permutation-greater-than-target) |
 | [3734-lexicographically-smallest-palindromic-permutation-greater-than-target](https://github.com/minjeong17/Algorithm/tree/master/3734-lexicographically-smallest-palindromic-permutation-greater-than-target) |
+## Trie
+|  |
+| ------- |
+| [0014-longest-common-prefix](https://github.com/minjeong17/Algorithm/tree/master/0014-longest-common-prefix) |
 <!---LeetCode Topics End-->

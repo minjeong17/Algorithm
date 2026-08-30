@@ -15,6 +15,7 @@
 | [0238-product-of-array-except-self](https://github.com/minjeong17/Algorithm/tree/master/0238-product-of-array-except-self) |
 | [0347-top-k-frequent-elements](https://github.com/minjeong17/Algorithm/tree/master/0347-top-k-frequent-elements) |
 | [1386-cinema-seat-allocation](https://github.com/minjeong17/Algorithm/tree/master/1386-cinema-seat-allocation) |
+| [2091-removing-minimum-and-maximum-from-array](https://github.com/minjeong17/Algorithm/tree/master/2091-removing-minimum-and-maximum-from-array) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/minjeong17/Algorithm/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
 | [3069-distribute-elements-into-two-arrays-i](https://github.com/minjeong17/Algorithm/tree/master/3069-distribute-elements-into-two-arrays-i) |
 | [3471-find-the-largest-almost-missing-integer](https://github.com/minjeong17/Algorithm/tree/master/3471-find-the-largest-almost-missing-integer) |
@@ -91,6 +92,7 @@
 | [0011-container-with-most-water](https://github.com/minjeong17/Algorithm/tree/master/0011-container-with-most-water) |
 | [1386-cinema-seat-allocation](https://github.com/minjeong17/Algorithm/tree/master/1386-cinema-seat-allocation) |
 | [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
+| [2091-removing-minimum-and-maximum-from-array](https://github.com/minjeong17/Algorithm/tree/master/2091-removing-minimum-and-maximum-from-array) |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/minjeong17/Algorithm/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/minjeong17/Algorithm/tree/master/3016-minimum-number-of-pushes-to-type-word-ii) |
 | [3720-lexicographically-smallest-permutation-greater-than-target](https://github.com/minjeong17/Algorithm/tree/master/3720-lexicographically-smallest-permutation-greater-than-target) |

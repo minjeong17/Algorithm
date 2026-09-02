@@ -14,6 +14,7 @@
 | [0200-number-of-islands](https://github.com/minjeong17/Algorithm/tree/master/0200-number-of-islands) |
 | [0238-product-of-array-except-self](https://github.com/minjeong17/Algorithm/tree/master/0238-product-of-array-except-self) |
 | [0347-top-k-frequent-elements](https://github.com/minjeong17/Algorithm/tree/master/0347-top-k-frequent-elements) |
+| [0739-daily-temperatures](https://github.com/minjeong17/Algorithm/tree/master/0739-daily-temperatures) |
 | [1386-cinema-seat-allocation](https://github.com/minjeong17/Algorithm/tree/master/1386-cinema-seat-allocation) |
 | [2091-removing-minimum-and-maximum-from-array](https://github.com/minjeong17/Algorithm/tree/master/2091-removing-minimum-and-maximum-from-array) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/minjeong17/Algorithm/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
@@ -203,4 +204,12 @@
 |  |
 | ------- |
 | [0014-longest-common-prefix](https://github.com/minjeong17/Algorithm/tree/master/0014-longest-common-prefix) |
+## Stack
+|  |
+| ------- |
+| [0739-daily-temperatures](https://github.com/minjeong17/Algorithm/tree/master/0739-daily-temperatures) |
+## Monotonic Stack
+|  |
+| ------- |
+| [0739-daily-temperatures](https://github.com/minjeong17/Algorithm/tree/master/0739-daily-temperatures) |
 <!---LeetCode Topics End-->

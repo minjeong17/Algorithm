@@ -4,19 +4,17 @@ class Solution {
     public int[] dailyTemperatures(int[] temperatures) {
         int[] answer = new int[temperatures.length];
 
-        Stack<int[]> stack = new Stack<>();
-        int maxT = Integer.MIN_VALUE;
+        Stack<Integer> stack = new Stack<>();
         for (int i = temperatures.length - 1; i >= 0; i--) {
-            if (!stack.isEmpty() && temperatures[i] < maxT) {
-                while (!stack.isEmpty() && stack.peek()[0] <= temperatures[i]) {
+            if (!stack.isEmpty()) {
+                while (!stack.isEmpty() && temperatures[stack.peek()] <= temperatures[i]) {
                     stack.pop();
                 }
 
-                answer[i] = stack.peek()[1] - i;
+                if (!stack.isEmpty()) answer[i] = stack.peek() - i;
             }
 
-            stack.push(new int[] {temperatures[i], i});
-            maxT = Math.max(maxT, temperatures[i]);
+            stack.push(i);
         }
 
         return answer;

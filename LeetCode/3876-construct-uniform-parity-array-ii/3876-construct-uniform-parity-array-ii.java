@@ -2,13 +2,15 @@ import java.util.*;
 
 class Solution {
     public boolean uniformArray(int[] nums1) {
-        Arrays.sort(nums1);
+        int minN = Integer.MAX_VALUE;
+        boolean hasOdd = false;
+        for (int n : nums1) {
+            minN = Math.min(minN, n);
 
-        if (nums1[0] % 2 == 0) {
-            for (int i = 1; i < nums1.length; i++) {
-                if (nums1[i] % 2 == 1) return false;
-            }
+            if (n % 2 == 1) hasOdd = true;
         }
+
+        if (minN % 2 == 0 && hasOdd) return false;
 
         return true;
     }

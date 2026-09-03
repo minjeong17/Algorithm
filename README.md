@@ -9,6 +9,7 @@
 | [0011-container-with-most-water](https://github.com/minjeong17/Algorithm/tree/master/0011-container-with-most-water) |
 | [0014-longest-common-prefix](https://github.com/minjeong17/Algorithm/tree/master/0014-longest-common-prefix) |
 | [0015-3sum](https://github.com/minjeong17/Algorithm/tree/master/0015-3sum) |
+| [0046-permutations](https://github.com/minjeong17/Algorithm/tree/master/0046-permutations) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/minjeong17/Algorithm/tree/master/0056-merge-intervals) |
 | [0200-number-of-islands](https://github.com/minjeong17/Algorithm/tree/master/0200-number-of-islands) |
@@ -213,4 +214,8 @@
 |  |
 | ------- |
 | [0739-daily-temperatures](https://github.com/minjeong17/Algorithm/tree/master/0739-daily-temperatures) |
+## Backtracking
+|  |
+| ------- |
+| [0046-permutations](https://github.com/minjeong17/Algorithm/tree/master/0046-permutations) |
 <!---LeetCode Topics End-->

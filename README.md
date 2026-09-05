@@ -26,6 +26,7 @@
 | [3718-smallest-missing-multiple-of-k](https://github.com/minjeong17/Algorithm/tree/master/3718-smallest-missing-multiple-of-k) |
 | [3876-construct-uniform-parity-array-ii](https://github.com/minjeong17/Algorithm/tree/master/3876-construct-uniform-parity-array-ii) |
 | [3903-smallest-stable-index-i](https://github.com/minjeong17/Algorithm/tree/master/3903-smallest-stable-index-i) |
+| [3904-smallest-stable-index-ii](https://github.com/minjeong17/Algorithm/tree/master/3904-smallest-stable-index-ii) |
 ## Hash Table
 |  |
 | ------- |
@@ -192,6 +193,7 @@
 | ------- |
 | [0238-product-of-array-except-self](https://github.com/minjeong17/Algorithm/tree/master/0238-product-of-array-except-self) |
 | [3903-smallest-stable-index-i](https://github.com/minjeong17/Algorithm/tree/master/3903-smallest-stable-index-i) |
+| [3904-smallest-stable-index-ii](https://github.com/minjeong17/Algorithm/tree/master/3904-smallest-stable-index-ii) |
 ## Heap (Priority Queue)
 |  |
 | ------- |

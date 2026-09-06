@@ -75,6 +75,7 @@
 | [0012-integer-to-roman](https://github.com/minjeong17/Algorithm/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/minjeong17/Algorithm/tree/master/0013-roman-to-integer) |
 | [0014-longest-common-prefix](https://github.com/minjeong17/Algorithm/tree/master/0014-longest-common-prefix) |
+| [0020-valid-parentheses](https://github.com/minjeong17/Algorithm/tree/master/0020-valid-parentheses) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
 | [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
 | [2904-shortest-and-lexicographically-smallest-beautiful-string](https://github.com/minjeong17/Algorithm/tree/master/2904-shortest-and-lexicographically-smallest-beautiful-string) |
@@ -224,6 +225,7 @@
 ## Stack
 |  |
 | ------- |
+| [0020-valid-parentheses](https://github.com/minjeong17/Algorithm/tree/master/0020-valid-parentheses) |
 | [0739-daily-temperatures](https://github.com/minjeong17/Algorithm/tree/master/0739-daily-temperatures) |
 ## Monotonic Stack
 |  |
@@ -233,4 +235,8 @@
 |  |
 | ------- |
 | [0046-permutations](https://github.com/minjeong17/Algorithm/tree/master/0046-permutations) |
+## Bracket Sequences
+|  |
+| ------- |
+| [0020-valid-parentheses](https://github.com/minjeong17/Algorithm/tree/master/0020-valid-parentheses) |
 <!---LeetCode Topics End-->

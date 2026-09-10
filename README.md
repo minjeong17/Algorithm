@@ -164,6 +164,7 @@
 |  |
 | ------- |
 | [0200-number-of-islands](https://github.com/minjeong17/Algorithm/tree/master/0200-number-of-islands) |
+| [2265-count-nodes-equal-to-average-of-subtree](https://github.com/minjeong17/Algorithm/tree/master/2265-count-nodes-equal-to-average-of-subtree) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -243,4 +244,12 @@
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/minjeong17/Algorithm/tree/master/0020-valid-parentheses) |
+## Tree
+|  |
+| ------- |
+| [2265-count-nodes-equal-to-average-of-subtree](https://github.com/minjeong17/Algorithm/tree/master/2265-count-nodes-equal-to-average-of-subtree) |
+## Binary Tree
+|  |
+| ------- |
+| [2265-count-nodes-equal-to-average-of-subtree](https://github.com/minjeong17/Algorithm/tree/master/2265-count-nodes-equal-to-average-of-subtree) |
 <!---LeetCode Topics End-->

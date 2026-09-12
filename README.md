@@ -10,6 +10,7 @@
 | [0014-longest-common-prefix](https://github.com/minjeong17/Algorithm/tree/master/0014-longest-common-prefix) |
 | [0015-3sum](https://github.com/minjeong17/Algorithm/tree/master/0015-3sum) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/minjeong17/Algorithm/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0027-remove-element](https://github.com/minjeong17/Algorithm/tree/master/0027-remove-element) |
 | [0046-permutations](https://github.com/minjeong17/Algorithm/tree/master/0046-permutations) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/minjeong17/Algorithm/tree/master/0056-merge-intervals) |
@@ -162,6 +163,7 @@
 | [0011-container-with-most-water](https://github.com/minjeong17/Algorithm/tree/master/0011-container-with-most-water) |
 | [0015-3sum](https://github.com/minjeong17/Algorithm/tree/master/0015-3sum) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/minjeong17/Algorithm/tree/master/0026-remove-duplicates-from-sorted-array) |
+| [0027-remove-element](https://github.com/minjeong17/Algorithm/tree/master/0027-remove-element) |
 | [3734-lexicographically-smallest-palindromic-permutation-greater-than-target](https://github.com/minjeong17/Algorithm/tree/master/3734-lexicographically-smallest-palindromic-permutation-greater-than-target) |
 ## Depth-First Search
 |  |

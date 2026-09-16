@@ -64,6 +64,7 @@
 | [0012-integer-to-roman](https://github.com/minjeong17/Algorithm/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/minjeong17/Algorithm/tree/master/0013-roman-to-integer) |
 | [0836-rectangle-overlap](https://github.com/minjeong17/Algorithm/tree/master/0836-rectangle-overlap) |
+| [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/minjeong17/Algorithm/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
 | [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/minjeong17/Algorithm/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
 | [3622-check-divisibility-by-digit-sum-and-product](https://github.com/minjeong17/Algorithm/tree/master/3622-check-divisibility-by-digit-sum-and-product) |
@@ -192,6 +193,7 @@
 |  |
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/minjeong17/Algorithm/tree/master/0005-longest-palindromic-substring) |
+| [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/minjeong17/Algorithm/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
 ## Manacher
 |  |
 | ------- |
@@ -208,6 +210,7 @@
 |  |
 | ------- |
 | [0238-product-of-array-except-self](https://github.com/minjeong17/Algorithm/tree/master/0238-product-of-array-except-self) |
+| [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/minjeong17/Algorithm/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
 | [3903-smallest-stable-index-i](https://github.com/minjeong17/Algorithm/tree/master/3903-smallest-stable-index-i) |
 | [3904-smallest-stable-index-ii](https://github.com/minjeong17/Algorithm/tree/master/3904-smallest-stable-index-ii) |
 ## Heap (Priority Queue)
@@ -267,4 +270,8 @@
 |  |
 | ------- |
 | [0836-rectangle-overlap](https://github.com/minjeong17/Algorithm/tree/master/0836-rectangle-overlap) |
+## Combinatorics
+|  |
+| ------- |
+| [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/minjeong17/Algorithm/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
 <!---LeetCode Topics End-->

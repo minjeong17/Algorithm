@@ -90,6 +90,7 @@
 | [0013-roman-to-integer](https://github.com/minjeong17/Algorithm/tree/master/0013-roman-to-integer) |
 | [0014-longest-common-prefix](https://github.com/minjeong17/Algorithm/tree/master/0014-longest-common-prefix) |
 | [0020-valid-parentheses](https://github.com/minjeong17/Algorithm/tree/master/0020-valid-parentheses) |
+| [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/minjeong17/Algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
 | [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
 | [2904-shortest-and-lexicographically-smallest-beautiful-string](https://github.com/minjeong17/Algorithm/tree/master/2904-shortest-and-lexicographically-smallest-beautiful-string) |
@@ -173,6 +174,7 @@
 | [0015-3sum](https://github.com/minjeong17/Algorithm/tree/master/0015-3sum) |
 | [0026-remove-duplicates-from-sorted-array](https://github.com/minjeong17/Algorithm/tree/master/0026-remove-duplicates-from-sorted-array) |
 | [0027-remove-element](https://github.com/minjeong17/Algorithm/tree/master/0027-remove-element) |
+| [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/minjeong17/Algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [3734-lexicographically-smallest-palindromic-permutation-greater-than-target](https://github.com/minjeong17/Algorithm/tree/master/3734-lexicographically-smallest-palindromic-permutation-greater-than-target) |
 ## Depth-First Search
 |  |
@@ -279,4 +281,20 @@
 |  |
 | ------- |
 | [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/minjeong17/Algorithm/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
+## String Matching
+|  |
+| ------- |
+| [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/minjeong17/Algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+## Z Algorithm
+|  |
+| ------- |
+| [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/minjeong17/Algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+## Knuth–Morris–Pratt Algorithm
+|  |
+| ------- |
+| [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/minjeong17/Algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+## Boyer–Moore String-Search Algorithm
+|  |
+| ------- |
+| [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/minjeong17/Algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 <!---LeetCode Topics End-->

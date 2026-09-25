@@ -68,6 +68,7 @@
 | [0009-palindrome-number](https://github.com/minjeong17/Algorithm/tree/master/0009-palindrome-number) |
 | [0012-integer-to-roman](https://github.com/minjeong17/Algorithm/tree/master/0012-integer-to-roman) |
 | [0013-roman-to-integer](https://github.com/minjeong17/Algorithm/tree/master/0013-roman-to-integer) |
+| [0029-divide-two-integers](https://github.com/minjeong17/Algorithm/tree/master/0029-divide-two-integers) |
 | [0836-rectangle-overlap](https://github.com/minjeong17/Algorithm/tree/master/0836-rectangle-overlap) |
 | [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/minjeong17/Algorithm/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
 | [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
@@ -217,6 +218,7 @@
 ## Bit Manipulation
 |  |
 | ------- |
+| [0029-divide-two-integers](https://github.com/minjeong17/Algorithm/tree/master/0029-divide-two-integers) |
 | [1386-cinema-seat-allocation](https://github.com/minjeong17/Algorithm/tree/master/1386-cinema-seat-allocation) |
 ## Simulation
 |  |

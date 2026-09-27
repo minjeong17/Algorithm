@@ -102,6 +102,7 @@
 | [0022-generate-parentheses](https://github.com/minjeong17/Algorithm/tree/master/0022-generate-parentheses) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/minjeong17/Algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
+| [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/minjeong17/Algorithm/tree/master/1190-reverse-substrings-between-each-pair-of-parentheses) |
 | [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/minjeong17/Algorithm/tree/master/1807-evaluate-the-bracket-pairs-of-a-string) |
 | [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
 | [2904-shortest-and-lexicographically-smallest-beautiful-string](https://github.com/minjeong17/Algorithm/tree/master/2904-shortest-and-lexicographically-smallest-beautiful-string) |
@@ -267,6 +268,7 @@
 | ------- |
 | [0020-valid-parentheses](https://github.com/minjeong17/Algorithm/tree/master/0020-valid-parentheses) |
 | [0739-daily-temperatures](https://github.com/minjeong17/Algorithm/tree/master/0739-daily-temperatures) |
+| [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/minjeong17/Algorithm/tree/master/1190-reverse-substrings-between-each-pair-of-parentheses) |
 ## Monotonic Stack
 |  |
 | ------- |
@@ -282,6 +284,7 @@
 | ------- |
 | [0020-valid-parentheses](https://github.com/minjeong17/Algorithm/tree/master/0020-valid-parentheses) |
 | [0022-generate-parentheses](https://github.com/minjeong17/Algorithm/tree/master/0022-generate-parentheses) |
+| [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/minjeong17/Algorithm/tree/master/1190-reverse-substrings-between-each-pair-of-parentheses) |
 ## Tree
 |  |
 | ------- |

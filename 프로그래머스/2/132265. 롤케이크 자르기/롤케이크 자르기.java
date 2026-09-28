@@ -4,23 +4,16 @@ class Solution {
     public int solution(int[] topping) {
         int answer = 0;
         
-        Map<Integer, Integer> type1 = new HashMap<>();
-        Map<Integer, Integer> type2 = new HashMap<>();
+        Map<Integer, Integer> rightCnt = new HashMap<>();
+        for (int t : topping) rightCnt.put(t, rightCnt.getOrDefault(t, 0) + 1);
         
-        for (int i = 0; i < topping.length; i++) {
-            type2.put(topping[i], type2.getOrDefault(topping[i], 0) + 1);
-        }
-        
-        int idx = 0;
-        while (type2.size() > 0) {
-            int t = topping[idx];
+        Set<Integer> left = new HashSet<>();
+        for (int t : topping) {
+            left.add(t);
+            rightCnt.put(t, rightCnt.get(t) - 1);
+            if (rightCnt.get(t) == 0) rightCnt.remove(t);
             
-            type1.put(t, type1.getOrDefault(t, 0) + 1);
-            if (type2.get(t) == 1) type2.remove(t);
-            else type2.put(t, type2.get(t) - 1);
-            
-            if (type1.size() == type2.size()) answer++;
-            idx++;
+            if (left.size() == rightCnt.size()) answer++;
         }
         
         return answer;

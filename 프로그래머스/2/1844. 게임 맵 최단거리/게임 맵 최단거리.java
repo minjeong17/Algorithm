@@ -1,49 +1,46 @@
 import java.util.*;
 
 class Solution {
-    
     int[][] maps;
-    int n, m;
+    int m, n;
     int[] dr = {-1, 1, 0, 0};
     int[] dc = {0, 0, -1, 1};
-   
     public int solution(int[][] maps) {
         this.maps = maps;
-        n = maps.length;
-        m = maps[0].length;
+        m = maps.length;
+        n = maps[0].length;
         
-        return bfs();
+        return bfs(0, 0);
     }
     
-    public int bfs() {
+    public int bfs(int r, int c) {
         Queue<int[]> q = new LinkedList<>();
-        boolean[][] visited = new boolean[n][m];
+        boolean[][] visited = new boolean[m][n];
         
-        q.add(new int[] {0, 0});
-        visited[0][0] = true;
+        q.add(new int[] {r, c});
+        visited[r][c] = true;
         
-        int cnt = 1;
+        int answer = 1;
         while (!q.isEmpty()) {
             int size = q.size();
             for (int i = 0; i < size; i++) {
                 int[] curr = q.poll();
-                
-                if (curr[0] == n-1 && curr[1] == m-1) {
-                    return cnt;
-                }
-                
+            
+                if (curr[0] == m - 1 && curr[1] == n - 1) return answer;
+
                 for (int d = 0; d < 4; d++) {
                     int nr = curr[0] + dr[d];
                     int nc = curr[1] + dc[d];
-                    
-                    if (nr < 0 || nr >= n || nc < 0 || nc >= m) continue;
+
+                    if (nr < 0 || nr >= m || nc < 0 || nc >= n) continue;
                     if (visited[nr][nc] || maps[nr][nc] == 0) continue;
-                    
-                    visited[nr][nc] = true;
+
                     q.add(new int[] {nr, nc});
+                    visited[nr][nc] = true;
                 }
             }
-            cnt++;
+            
+            answer++;
         }
         
         return -1;

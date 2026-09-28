@@ -1,42 +1,46 @@
 import java.util.*;
 
 class Solution {
-    public int[] solution(int[] fees, String[] records) {
-        
-        Map<String, Integer> inOut = new HashMap<>();
-        Map<String, Integer> totalTime = new TreeMap<>();
-        for (String record : records) {
-            String[] r = record.split(" ");
-            String carNum = r[1];
-            String[] t = r[0].split(":");
-            int time = Integer.parseInt(t[0]) * 60 + Integer.parseInt(t[1]);
+    public int[] solution(int[] fees, String[] records) {        
+        Map<String, Integer> enterTime = new HashMap<>();
+        Map<String, Integer> carTime = new TreeMap<>();
+        for (String r : records) {
+            String[] parsed = r.split(" ");
+            int time = timeParsing(parsed[0]);
             
-            if (r[2].equals("IN")) {
-                inOut.put(carNum, time);
+            if (parsed[2].equals("IN")) {
+                enterTime.put(parsed[1], time);
             } else {
-                int inTime = inOut.get(carNum);
-                totalTime.put(carNum, totalTime.getOrDefault(carNum, 0) + (time - inTime));
+                int t = enterTime.get(parsed[1]);
                 
-                inOut.remove(carNum);
+                carTime.put(parsed[1], carTime.getOrDefault(parsed[1], 0) + (time - t));
+                enterTime.remove(parsed[1]);
             }
         }
         
-        if (inOut.size() > 0) {
-            for (String carNum : inOut.keySet()) {
-                int inTime = inOut.get(carNum);
-                totalTime.put(carNum, totalTime.getOrDefault(carNum, 0) + ((23*60+59) - inTime));
-            }
-        }
-        
-        int[] answer = new int[totalTime.size()];
-        int idx = 0;
-        for (String carNum : totalTime.keySet()) {
-            int tmp = (int)Math.ceil((totalTime.get(carNum) - fees[0]) / (double)fees[2]);
+        for (String car : enterTime.keySet()) {
+            int t = enterTime.get(car);
             
-            if (tmp >= 0) answer[idx++] = fees[1] + tmp * fees[3];
-            else answer[idx++] = fees[1];
+            carTime.put(car, carTime.getOrDefault(car, 0) + (1439 - t));
         }
-
+                
+        int[] answer = new int[carTime.size()];
+        int idx = 0;
+        for (String car : carTime.keySet()) {
+            int total = carTime.get(car);
+            
+            if (total <= fees[0]) answer[idx++] = fees[1];
+            else {
+                answer[idx++] = fees[1] + (int) Math.ceil((total - fees[0]) / (double)fees[2]) * fees[3];
+            }
+        }
+        
         return answer;
+    }
+    
+    public int timeParsing(String time) {
+        String[] t = time.split(":");
+        
+        return Integer.parseInt(t[0]) * 60 + Integer.parseInt(t[1]);
     }
 }

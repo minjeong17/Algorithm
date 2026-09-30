@@ -4,20 +4,20 @@ class Solution {
     public long solution(int n, int[] works) {
         long answer = 0;
         
-        PriorityQueue<Integer> work = new PriorityQueue<>((o1, o2) -> o2 - o1);
-        for (int w : works) work.add(w);
+        PriorityQueue<Integer> pq = new PriorityQueue<>((o1, o2) -> o2 - o1);
+        for (int w : works) pq.add(w);
         
         for (int i = 0; i < n; i++) {
-            if (!work.isEmpty()) {
-                int w = work.poll();
-                if (w > 1) work.add(w - 1);
-            }
+            if (pq.isEmpty()) break;
+            
+            int c = pq.poll();
+            if (c > 0) pq.add(c - 1);
         }
         
-        int size = work.size();
-        for (int i = 0; i < size; i++) {
-            long w = work.poll();
-            answer += (w * w);
+        while (!pq.isEmpty()) {
+            int c = pq.poll();
+            
+            answer += c * c;
         }
         
         return answer;

@@ -4,23 +4,20 @@ class Solution {
     public long solution(int[] weights) {
         long answer = 0;
         
-        Map<Double, Integer> map = new HashMap<>();
-        
-        Arrays.sort(weights);
-        for (double weight : weights) {
-            
-            // 1:1 1:2 2:3 3:4
-            double w1 = weight / 2;
-            double w2 = (weight / 3) * 2;
-            double w3 = (weight / 4) * 3;
-            
-            if (map.containsKey(weight)) answer += map.get(weight);
-            if (map.containsKey(w1)) answer += map.get(w1);
-            if (map.containsKey(w2)) answer += map.get(w2);
-            if (map.containsKey(w3)) answer += map.get(w3);
-            
-            map.put(weight, map.getOrDefault(weight, 0)+1);   
+        Map<Integer, Long> cnt = new TreeMap<>();
+        for (int w : weights) {
+            cnt.put(w, cnt.getOrDefault(w, 0L) + 1);
         }
+        
+        for (int k : cnt.keySet()) {
+            long v = cnt.get(k);
+            
+            answer += v * (v - 1) / 2;
+            
+            if (cnt.containsKey(k * 2)) answer += v * cnt.get(k * 2);
+            if ((k * 3) % 2 == 0 && cnt.containsKey(k * 3 / 2)) answer += v * cnt.get(k * 3 / 2);
+            if ((k * 4) % 3 == 0 && cnt.containsKey(k * 4 / 3)) answer += v * cnt.get(k * 4 / 3);
+        } 
         
         return answer;
     }

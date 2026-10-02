@@ -1,14 +1,11 @@
 import java.util.*;
 
 class Solution {
-    int answer;
     char[] nums;
     int[] sel;
     boolean[] visited, isPrime;
     Set<Integer> primes;
-    public int solution(String numbers) {
-        answer = 0;
-        
+    public int solution(String numbers) {        
         nums = numbers.toCharArray();
         
         int totalNum = 1;
@@ -18,7 +15,7 @@ class Solution {
         isPrime[0] = false; isPrime[1] = false;
         for (int i = 2; i * i <= totalNum; i++) {
             if (isPrime[i]) {
-                for (int j = i + i; j < totalNum; j += i) {
+                for (int j = i * i; j < totalNum; j += i) {
                     isPrime[j] = false;
                 }
                 
@@ -41,8 +38,7 @@ class Solution {
         if (idx == size) {
             int num = 0;
             for (int i = 0; i < size; i++) {
-                num += sel[i];
-                if (i < size - 1) num *= 10;
+                num = num * 10 + sel[i];
             }
                         
             if (isPrime[num]) primes.add(num);

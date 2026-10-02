@@ -2,62 +2,58 @@ import java.util.*;
 
 class Solution {
     int answer;
-    boolean[] isPrime;
-    int[] nums;
-    int[] tmp;
-    boolean[] visited;
-    Set<Integer> set;
+    char[] nums;
+    int[] sel;
+    boolean[] visited, isPrime;
+    Set<Integer> primes;
     public int solution(String numbers) {
         answer = 0;
         
-        int len = numbers.length();
+        nums = numbers.toCharArray();
         
-        int maxNum = (int)Math.pow(10, len) - 1;
-        isPrime = new boolean[maxNum + 1];
+        int totalNum = 1;
+        for (int i = 0; i < nums.length; i++) totalNum *= 10;
+        isPrime = new boolean[totalNum];
         Arrays.fill(isPrime, true);
         isPrime[0] = false; isPrime[1] = false;
-        for (int i = 2; i * i <= maxNum; i++) {
-            for (int j = 2; i * j <= maxNum; j++) {
-                isPrime[i*j] = false;
+        for (int i = 2; i * i <= totalNum; i++) {
+            if (isPrime[i]) {
+                for (int j = i + i; j < totalNum; j += i) {
+                    isPrime[j] = false;
+                }
+                
             }
+            
+        }
+                
+        primes = new HashSet<>();
+        for (int s = 1; s <= numbers.length(); s++) {
+            sel = new int[s];   
+            visited = new boolean[nums.length];
+            
+            perm(0, s);
         }
         
-        nums = new int[len];
-        for (int i = 0; i < len; i++) {
-            nums[i] = numbers.charAt(i) - '0';
-        }
-        
-        set = new HashSet<>();
-        for (int i = 1; i <= len; i++) {
-            tmp = new int[i];
-            visited = new boolean[len];
-            perm(0);
-        }
-        
-        return answer;
+        return primes.size();
     }
     
-    public void perm (int idx) {
-        if (idx == tmp.length) {
-            StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < tmp.length; i++) {
-                sb.append(tmp[i]);
+    public void perm(int idx, int size) {
+        if (idx == size) {
+            int num = 0;
+            for (int i = 0; i < size; i++) {
+                num += sel[i];
+                if (i < size - 1) num *= 10;
             }
-            int n = Integer.parseInt(sb.toString());
-            
-            if (!set.contains(n)) {
-                set.add(n);
-                if (isPrime[n]) answer++;
-            }
-            
+                        
+            if (isPrime[num]) primes.add(num);
             return;
         }
         
         for (int i = 0; i < nums.length; i++) {
             if (!visited[i]) {
-                tmp[idx] = nums[i];
                 visited[i] = true;
-                perm(idx+1);
+                sel[idx] = nums[i] - '0';
+                perm(idx + 1, size);
                 visited[i] = false;
             }
         }

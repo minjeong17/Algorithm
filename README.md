@@ -164,6 +164,7 @@
 | [1141-user-activity-for-the-past-30-days-i](https://github.com/minjeong17/Algorithm/tree/master/1141-user-activity-for-the-past-30-days-i) |
 | [1193-monthly-transactions-i](https://github.com/minjeong17/Algorithm/tree/master/1193-monthly-transactions-i) |
 | [1280-students-and-examinations](https://github.com/minjeong17/Algorithm/tree/master/1280-students-and-examinations) |
+| [1321-restaurant-growth](https://github.com/minjeong17/Algorithm/tree/master/1321-restaurant-growth) |
 ## Sorting
 |  |
 | ------- |

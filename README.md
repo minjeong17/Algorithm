@@ -19,6 +19,7 @@
 | [0215-kth-largest-element-in-an-array](https://github.com/minjeong17/Algorithm/tree/master/0215-kth-largest-element-in-an-array) |
 | [0238-product-of-array-except-self](https://github.com/minjeong17/Algorithm/tree/master/0238-product-of-array-except-self) |
 | [0347-top-k-frequent-elements](https://github.com/minjeong17/Algorithm/tree/master/0347-top-k-frequent-elements) |
+| [0525-contiguous-array](https://github.com/minjeong17/Algorithm/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/minjeong17/Algorithm/tree/master/0560-subarray-sum-equals-k) |
 | [0739-daily-temperatures](https://github.com/minjeong17/Algorithm/tree/master/0739-daily-temperatures) |
 | [0835-image-overlap](https://github.com/minjeong17/Algorithm/tree/master/0835-image-overlap) |
@@ -47,6 +48,7 @@
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
 | [0128-longest-consecutive-sequence](https://github.com/minjeong17/Algorithm/tree/master/0128-longest-consecutive-sequence) |
 | [0347-top-k-frequent-elements](https://github.com/minjeong17/Algorithm/tree/master/0347-top-k-frequent-elements) |
+| [0525-contiguous-array](https://github.com/minjeong17/Algorithm/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/minjeong17/Algorithm/tree/master/0560-subarray-sum-equals-k) |
 | [1386-cinema-seat-allocation](https://github.com/minjeong17/Algorithm/tree/master/1386-cinema-seat-allocation) |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/minjeong17/Algorithm/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
@@ -238,6 +240,7 @@
 |  |
 | ------- |
 | [0238-product-of-array-except-self](https://github.com/minjeong17/Algorithm/tree/master/0238-product-of-array-except-self) |
+| [0525-contiguous-array](https://github.com/minjeong17/Algorithm/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/minjeong17/Algorithm/tree/master/0560-subarray-sum-equals-k) |
 | [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/minjeong17/Algorithm/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
 | [3903-smallest-stable-index-i](https://github.com/minjeong17/Algorithm/tree/master/3903-smallest-stable-index-i) |

@@ -49,6 +49,7 @@
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
 | [0128-longest-consecutive-sequence](https://github.com/minjeong17/Algorithm/tree/master/0128-longest-consecutive-sequence) |
 | [0347-top-k-frequent-elements](https://github.com/minjeong17/Algorithm/tree/master/0347-top-k-frequent-elements) |
+| [0424-longest-repeating-character-replacement](https://github.com/minjeong17/Algorithm/tree/master/0424-longest-repeating-character-replacement) |
 | [0525-contiguous-array](https://github.com/minjeong17/Algorithm/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/minjeong17/Algorithm/tree/master/0560-subarray-sum-equals-k) |
 | [1386-cinema-seat-allocation](https://github.com/minjeong17/Algorithm/tree/master/1386-cinema-seat-allocation) |
@@ -107,6 +108,7 @@
 | [0022-generate-parentheses](https://github.com/minjeong17/Algorithm/tree/master/0022-generate-parentheses) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/minjeong17/Algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
+| [0424-longest-repeating-character-replacement](https://github.com/minjeong17/Algorithm/tree/master/0424-longest-repeating-character-replacement) |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/minjeong17/Algorithm/tree/master/1190-reverse-substrings-between-each-pair-of-parentheses) |
 | [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/minjeong17/Algorithm/tree/master/1807-evaluate-the-bracket-pairs-of-a-string) |
 | [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
@@ -121,6 +123,7 @@
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/minjeong17/Algorithm/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0209-minimum-size-subarray-sum](https://github.com/minjeong17/Algorithm/tree/master/0209-minimum-size-subarray-sum) |
+| [0424-longest-repeating-character-replacement](https://github.com/minjeong17/Algorithm/tree/master/0424-longest-repeating-character-replacement) |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/minjeong17/Algorithm/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
 | [2904-shortest-and-lexicographically-smallest-beautiful-string](https://github.com/minjeong17/Algorithm/tree/master/2904-shortest-and-lexicographically-smallest-beautiful-string) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/minjeong17/Algorithm/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |

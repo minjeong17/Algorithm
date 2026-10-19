@@ -6,20 +6,26 @@ class Solution {
         
         Stack<Integer> stack = new Stack<>();
         int curr = 1;
-        int idx = 0;
-        while (idx < order.length) {
-            if (order[idx] == curr) {
-                curr++;
-                idx++;
+        for (int o : order) {
+            if (curr < o) {
+                while (curr < o) {
+                    stack.push(curr);
+                    curr++;
+                }
+                
+                if (curr == o) {
+                    answer++;
+                    curr++;
+                }
+            } else if (curr == o) {
                 answer++;
-            } else if (!stack.isEmpty() && stack.peek() == order[idx]) {
+                curr++;
+            } else if (!stack.isEmpty() && stack.peek() == o) {
                 stack.pop();
-                idx++;
                 answer++;
-            } else if (curr <= order[idx]){
-                stack.push(curr);
-                curr++;
-            } else break;
+            } else {
+                break;
+            }
         }
         
         return answer;

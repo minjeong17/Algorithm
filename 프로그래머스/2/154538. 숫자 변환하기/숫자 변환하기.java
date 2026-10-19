@@ -2,29 +2,37 @@ import java.util.*;
 
 class Solution {
     public int solution(int x, int y, int n) {
-        Queue<int[]> q = new LinkedList<>();
+        int answer = 0;
+        
+        Queue<Integer> q = new LinkedList<>();
         boolean[] visited = new boolean[y + 1];
-        q.add(new int[] {x, 0});
+        q.add(x);
         visited[x] = true;
+        
         while (!q.isEmpty()) {
-            int[] curr = q.poll();
-            
-            if (curr[0] == y) return curr[1];
-            
-            if (curr[0] * 3 <= y && !visited[curr[0] * 3]) {
-                q.add(new int[] {curr[0] * 3, curr[1] + 1});
-                visited[curr[0] * 3] = true;
+            int size = q.size();
+            for (int i = 0; i < size; i++) {
+                int curr = q.poll();
+                
+                if (curr == y) return answer;
+                
+                if (curr + n <= y && !visited[curr + n]) {
+                    q.add(curr + n);
+                    visited[curr + n] = true;
+                }
+                
+                if (curr * 2 <= y && !visited[curr * 2]) {
+                    q.add(curr * 2);
+                    visited[curr * 2] = true;
+                }
+                
+                if (curr * 3 <= y && !visited[curr * 3]) {
+                    q.add(curr * 3);
+                    visited[curr * 3] = true;
+                }
             }
             
-            if (curr[0] * 2 <= y && !visited[curr[0] * 2]) {
-                q.add(new int[] {curr[0] * 2, curr[1] + 1});
-                visited[curr[0] * 2] = true;
-            }
-            
-            if (curr[0] + n <= y && !visited[curr[0] + n]) {
-                q.add(new int[] {curr[0] + n, curr[1] + 1});
-                visited[curr[0] + n] = true;
-            }
+            answer++;
         }
         
         return -1;

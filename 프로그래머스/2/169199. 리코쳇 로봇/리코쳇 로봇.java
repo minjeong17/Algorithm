@@ -1,75 +1,74 @@
 import java.util.*;
 
 class Solution {
-    char[][] map;
-    int m, n, rR, cR, rG, cG;
+    int n, m, goalR, goalC;
+    char[][] b;
     int[] dr = {-1, 1, 0, 0};
     int[] dc = {0, 0, -1, 1};
     public int solution(String[] board) {
         int answer = 0;
         
-        m = board.length;
-        n = board[0].length();
-        map = new char[m][n];
-        for (int i = 0; i < m; i++) {
-            String str = board[i];
-            for (int j = 0; j < n; j++) {
-                map[i][j] = str.charAt(j);
+        n = board.length;
+        m = board[0].length();
+        
+        int startR = 0; int startC = 0;
+        goalR = 0; goalC = 0;
+        b = new char[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                b[i][j] = board[i].charAt(j);
                 
-                if (map[i][j] == 'R') {
-                    rR = i;
-                    cR = j;
-                }
-                
-                if (map[i][j] == 'G') {
-                    rG = i;
-                    cG = j;
+                if (b[i][j] == 'R') {
+                    startR = i;
+                    startC = j;
+                } else if (b[i][j] == 'G') {
+                    goalR = i;
+                    goalC = j;
                 }
             }
         }
         
-        return bfs(rR, cR);
+        return bfs(startR, startC);
     }
     
-    public int bfs(int r, int c) {
+    public int bfs(int startR, int startC) {
         Queue<int[]> q = new LinkedList<>();
-        boolean[][] visited = new boolean[m][n];
+        boolean[][] visited = new boolean[n][m];
         
-        q.add(new int[] {r, c});
-        visited[r][c] = true;
+        q.add(new int[] {startR, startC});
+        visited[startR][startC] = true;
         
-        int cnt = 0;
+        int ans = 0;
         while (!q.isEmpty()) {
             int size = q.size();
+            
             for (int i = 0; i < size; i++) {
                 int[] curr = q.poll();
                 
-                if (curr[0] == rG && curr[1] == cG) return cnt;
+                if (curr[0] == goalR && curr[1] == goalC) return ans;
                 
                 for (int d = 0; d < 4; d++) {
-                    int prevR = curr[0]; int prevC = curr[1];
-                    int nr; int nc;
+                    int nr = curr[0];
+                    int nc = curr[1];
+                    
                     while (true) {
-                        nr = prevR + dr[d];
-                        nc = prevC + dc[d];
+                        int nextR = nr + dr[d];
+                        int nextC = nc + dc[d];
                         
-                        if ((nr < 0 || nr >= m || nc < 0 || nc >= n) || map[nr][nc] == 'D') {
-                            nr -= dr[d];
-                            nc -= dc[d];
-                            break;
-                        }
-                                                
-                        prevR = nr;
-                        prevC = nc;
+                        if (nextR < 0 || nextR >= n || nextC < 0 || nextC >= m || b[nextR][nextC] == 'D') break;
+                           
+                        nr = nextR;
+                        nc = nextC;
                     }
                     
                     if (visited[nr][nc]) continue;
+                                        
                     visited[nr][nc] = true;
                     q.add(new int[] {nr, nc});
                 }
             }
             
-            cnt++;
+            ans++;
         }
         
         return -1;

@@ -4,37 +4,36 @@ class Solution {
     public int solution(int[] queue1, int[] queue2) {
         int answer = 0;
         
+        long sum1 = 0; long sum2 = 0;
         Queue<Integer> q1 = new LinkedList<>();
         Queue<Integer> q2 = new LinkedList<>();
-        long sum1 = 0;
-        long sum2 = 0;
-        for (int q : queue1) {
-            q1.add(q);
-            sum1 += q;
+        
+        for (int i = 0; i < queue1.length; i++) {
+            sum1 += queue1[i];
+            q1.add(queue1[i]);
+            
+            sum2 += queue2[i];
+            q2.add(queue2[i]);
         }
-        for (int q : queue2) {
-            q2.add(q);
-            sum2 += q;
-        }
-                
-        while (answer <= queue1.length * 3) {
+        
+        while (sum1 != sum2) {
             if (sum1 > sum2) {
                 int n = q1.poll();
+                q2.add(n);
                 sum1 -= n;
                 sum2 += n;
-                q2.add(n);
                 answer++;
             } else if (sum1 < sum2) {
                 int n = q2.poll();
-                sum2 -= n;
-                sum1 += n;
                 q1.add(n);
+                sum1 += n;
+                sum2 -= n;
                 answer++;
             }
             
-            if (sum1 == sum2) return answer;
+            if (answer > queue1.length * 3) break;
         }
         
-        return -1;
+        return sum1 == sum2 ? answer : -1;
     }
 }

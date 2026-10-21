@@ -2,22 +2,21 @@ import java.util.*;
 
 class Solution {
     public String solution(String number, int k) {
-        StringBuilder sb = new StringBuilder();
-
+        StringBuilder ans = new StringBuilder();
         for (int i = 0; i < number.length(); i++) {
-            char c = number.charAt(i);
-
-            while (k > 0 && sb.length() > 0 && sb.charAt(sb.length() - 1) < c) {
-                sb.deleteCharAt(sb.length() - 1);
+            while (k > 0 && ans.length() > 0 && number.charAt(i) > ans.charAt(ans.length() - 1)) {
+                ans.deleteCharAt(ans.length() - 1);
                 k--;
             }
-            sb.append(c);
+            
+            ans.append(number.charAt(i));
         }
-
-        if (k > 0) {
-            sb.setLength(sb.length() - k);
+        
+        while (k > 0 && ans.length() > 0) {
+            ans.deleteCharAt(ans.length() - 1);
+            k--;
         }
-
-        return sb.toString();
+        
+        return ans.toString();
     }
 }

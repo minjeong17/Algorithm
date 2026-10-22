@@ -22,6 +22,7 @@
 | [0347-top-k-frequent-elements](https://github.com/minjeong17/Algorithm/tree/master/0347-top-k-frequent-elements) |
 | [0525-contiguous-array](https://github.com/minjeong17/Algorithm/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/minjeong17/Algorithm/tree/master/0560-subarray-sum-equals-k) |
+| [0721-accounts-merge](https://github.com/minjeong17/Algorithm/tree/master/0721-accounts-merge) |
 | [0739-daily-temperatures](https://github.com/minjeong17/Algorithm/tree/master/0739-daily-temperatures) |
 | [0835-image-overlap](https://github.com/minjeong17/Algorithm/tree/master/0835-image-overlap) |
 | [1386-cinema-seat-allocation](https://github.com/minjeong17/Algorithm/tree/master/1386-cinema-seat-allocation) |
@@ -52,6 +53,7 @@
 | [0424-longest-repeating-character-replacement](https://github.com/minjeong17/Algorithm/tree/master/0424-longest-repeating-character-replacement) |
 | [0525-contiguous-array](https://github.com/minjeong17/Algorithm/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/minjeong17/Algorithm/tree/master/0560-subarray-sum-equals-k) |
+| [0721-accounts-merge](https://github.com/minjeong17/Algorithm/tree/master/0721-accounts-merge) |
 | [1386-cinema-seat-allocation](https://github.com/minjeong17/Algorithm/tree/master/1386-cinema-seat-allocation) |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/minjeong17/Algorithm/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
 | [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/minjeong17/Algorithm/tree/master/1807-evaluate-the-bracket-pairs-of-a-string) |
@@ -109,6 +111,7 @@
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/minjeong17/Algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
 | [0424-longest-repeating-character-replacement](https://github.com/minjeong17/Algorithm/tree/master/0424-longest-repeating-character-replacement) |
+| [0721-accounts-merge](https://github.com/minjeong17/Algorithm/tree/master/0721-accounts-merge) |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/minjeong17/Algorithm/tree/master/1190-reverse-substrings-between-each-pair-of-parentheses) |
 | [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/minjeong17/Algorithm/tree/master/1807-evaluate-the-bracket-pairs-of-a-string) |
 | [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
@@ -183,6 +186,7 @@
 | [0056-merge-intervals](https://github.com/minjeong17/Algorithm/tree/master/0056-merge-intervals) |
 | [0215-kth-largest-element-in-an-array](https://github.com/minjeong17/Algorithm/tree/master/0215-kth-largest-element-in-an-array) |
 | [0347-top-k-frequent-elements](https://github.com/minjeong17/Algorithm/tree/master/0347-top-k-frequent-elements) |
+| [0721-accounts-merge](https://github.com/minjeong17/Algorithm/tree/master/0721-accounts-merge) |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/minjeong17/Algorithm/tree/master/3016-minimum-number-of-pushes-to-type-word-ii) |
 ## Counting
 |  |
@@ -208,16 +212,19 @@
 |  |
 | ------- |
 | [0200-number-of-islands](https://github.com/minjeong17/Algorithm/tree/master/0200-number-of-islands) |
+| [0721-accounts-merge](https://github.com/minjeong17/Algorithm/tree/master/0721-accounts-merge) |
 | [2265-count-nodes-equal-to-average-of-subtree](https://github.com/minjeong17/Algorithm/tree/master/2265-count-nodes-equal-to-average-of-subtree) |
 ## Breadth-First Search
 |  |
 | ------- |
 | [0200-number-of-islands](https://github.com/minjeong17/Algorithm/tree/master/0200-number-of-islands) |
+| [0721-accounts-merge](https://github.com/minjeong17/Algorithm/tree/master/0721-accounts-merge) |
 ## Union-Find
 |  |
 | ------- |
 | [0128-longest-consecutive-sequence](https://github.com/minjeong17/Algorithm/tree/master/0128-longest-consecutive-sequence) |
 | [0200-number-of-islands](https://github.com/minjeong17/Algorithm/tree/master/0200-number-of-islands) |
+| [0721-accounts-merge](https://github.com/minjeong17/Algorithm/tree/master/0721-accounts-merge) |
 ## Matrix
 |  |
 | ------- |

@@ -3,31 +3,20 @@ import java.util.*;
 class Solution {
     public int[] productExceptSelf(int[] nums) {
         int[] answer = new int[nums.length];
+        Arrays.fill(answer, 1);
 
-        List<int[]> zeros = new ArrayList<>();
-        int prod = 1;
-        for (int i = 0; i < nums.length; i++) {
-            if (nums[i] == 0) zeros.add(new int[] {i, 0});
-            else prod *= nums[i];
+        int mul = 1;
+        for (int i = 1; i < nums.length; i++) {
+            mul *= nums[i-1];
+
+            answer[i] *= mul;
         }
 
-        if (zeros.size() >= 2) return answer;
-        else if (zeros.size() == 1) {
-            answer[zeros.get(0)[0]] = prod;
-        } else {
-            Arrays.fill(answer, 1);
-            int prefix = nums[0];
-            for (int i = 1; i < nums.length; i++) {
-                answer[i] = prefix;
-                prefix *= nums[i];
-            }
-            
-            int suffix = nums[nums.length - 1];
-            for (int i = nums.length - 2; i >= 0; i--) {
-                answer[i] *= suffix;
-                suffix *= nums[i];
-            }
-        } 
+        mul = 1;
+        for (int i = nums.length - 2; i >= 0; i--) {
+            mul *= nums[i+1];
+            answer[i] *= mul;
+        }
 
         return answer;
     }

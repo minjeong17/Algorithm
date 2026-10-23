@@ -1,47 +1,43 @@
+import java.util.*;
+
 class Solution {
+    char[][] b;
     public int solution(String[] board) {
-        // 1. O 개수 == X 개수 || O 개수 = X 개수 + 1
+        int answer = 0;
+        
         int cntO = 0;
         int cntX = 0;
+        
+        b = new char[3][3];
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (board[i].charAt(j) == 'O') cntO++;
-                else if (board[i].charAt(j) == 'X') cntX++;
+                b[i][j] = board[i].charAt(j);
+                
+                if (b[i][j] == 'O') cntO++;
+                else if (b[i][j] == 'X') cntX++;
             }
         }
         
-        if (cntO != cntX && cntO != cntX + 1) return 0;
+        boolean winO = check('O');
+        boolean winX = check('X');
         
-        // 2. O / X 가 동시에 완성되면 안 됨
-        // 3. O 완성 -> O 개수 = X 개수 + 1
-        // 4. X 완성 -> O 개수 == X 개수
-        boolean winO = checkWin(board, 'O');
-        boolean winX = checkWin(board, 'X');
-        
-        if (winO && winX) return 0;
-        if (winO) {
-            if (cntO == cntX + 1) return 1;
+        if (cntO == cntX + 1) {
+            if (winX) return 0;
+            else return 1;
+        } else if (cntO == cntX) {
+            if ((!winO && winX) || (!winO && !winX)) return 1;
             else return 0;
-        }
-        if (winX) {
-            if (cntO == cntX) return 1;
-            else return 0;
-        }
-        
-        return 1;
+        } else return 0;
     }
     
-    public boolean checkWin(String[] board, char w) {
+    public boolean check(char target) {
         for (int i = 0; i < 3; i++) {
-            if (board[i].charAt(0) == w && board[i].charAt(1) == w && board[i].charAt(2) == w) return true;
+            if (b[i][0] == target && b[i][0] == b[i][1] && b[i][1] == b[i][2]) return true;
+            if (b[0][i] == target && b[0][i] == b[1][i] && b[1][i] == b[2][i]) return true;
         }
         
-        for (int j = 0; j < 3; j++) {
-            if (board[0].charAt(j) == w && board[1].charAt(j) == w && board[2].charAt(j) == w) return true;
-        }
-        
-        if (board[0].charAt(0) == w && board[1].charAt(1) == w && board[2].charAt(2) == w) return true;
-        if (board[2].charAt(0) == w && board[1].charAt(1) == w && board[0].charAt(2) == w) return true;
+        if (b[0][0] == target && b[0][0] == b[1][1] && b[1][1] == b[2][2]) return true;
+        if (b[2][0] == target && b[2][0] == b[1][1] && b[1][1] == b[0][2]) return true;
         
         return false;
     }

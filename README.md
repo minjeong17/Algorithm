@@ -13,6 +13,7 @@
 | [0027-remove-element](https://github.com/minjeong17/Algorithm/tree/master/0027-remove-element) |
 | [0046-permutations](https://github.com/minjeong17/Algorithm/tree/master/0046-permutations) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
+| [0055-jump-game](https://github.com/minjeong17/Algorithm/tree/master/0055-jump-game) |
 | [0056-merge-intervals](https://github.com/minjeong17/Algorithm/tree/master/0056-merge-intervals) |
 | [0079-word-search](https://github.com/minjeong17/Algorithm/tree/master/0079-word-search) |
 | [0128-longest-consecutive-sequence](https://github.com/minjeong17/Algorithm/tree/master/0128-longest-consecutive-sequence) |
@@ -150,6 +151,7 @@
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/minjeong17/Algorithm/tree/master/0011-container-with-most-water) |
+| [0055-jump-game](https://github.com/minjeong17/Algorithm/tree/master/0055-jump-game) |
 | [1386-cinema-seat-allocation](https://github.com/minjeong17/Algorithm/tree/master/1386-cinema-seat-allocation) |
 | [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
 | [2091-removing-minimum-and-maximum-from-array](https://github.com/minjeong17/Algorithm/tree/master/2091-removing-minimum-and-maximum-from-array) |
@@ -245,6 +247,7 @@
 | ------- |
 | [0005-longest-palindromic-substring](https://github.com/minjeong17/Algorithm/tree/master/0005-longest-palindromic-substring) |
 | [0022-generate-parentheses](https://github.com/minjeong17/Algorithm/tree/master/0022-generate-parentheses) |
+| [0055-jump-game](https://github.com/minjeong17/Algorithm/tree/master/0055-jump-game) |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/minjeong17/Algorithm/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
 | [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/minjeong17/Algorithm/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
 | [3524-find-x-value-of-array-i](https://github.com/minjeong17/Algorithm/tree/master/3524-find-x-value-of-array-i) |

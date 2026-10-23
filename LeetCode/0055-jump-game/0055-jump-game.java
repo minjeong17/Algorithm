@@ -4,25 +4,15 @@ class Solution {
     public boolean canJump(int[] nums) {
         if (nums.length == 1) return true;
 
-        List<Integer> zeroIdx = new ArrayList<>();
+        int maxReach = 0;
         for (int i = 0; i < nums.length - 1; i++) {
-            if (nums[i] == 0) zeroIdx.add(i);
+            if (maxReach < i) return false;
+
+            maxReach = Math.max(maxReach, nums[i] + i);
+
+            if (maxReach >= nums.length - 1) return true;
         }
 
-        if (zeroIdx.size() == 0) return true;
-
-        for (int idx : zeroIdx) {
-            boolean flag = false;
-            for (int i = 0; i < idx; i++) {
-                if (nums[i] > idx - i) {
-                    flag = true;
-                    break;
-                }
-            }
-
-            if (!flag) return false;
-        }
-
-        return true;
+        return maxReach >= (nums.length - 1);
     }
 }

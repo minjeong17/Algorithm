@@ -1,49 +1,43 @@
 import java.util.*;
 
 class Solution {
+    String[] want;
     int[] number;
+    Map<String, Integer> idx, disc;
     public int solution(String[] want, int[] number, String[] discount) {
+        this.want = want;
         this.number = number;
+        
         int answer = 0;
         
-        Map<String, Integer> idxMap = new HashMap<>();
-        for (int i = 0; i < want.length; i++) {
-            idxMap.put(want[i], i);
-        }
-        
-        int[] cnt = new int[want.length];
+        disc = new HashMap<>();
         for (int i = 0; i < 10; i++) {
-            String w = discount[i];
-            
-            if (idxMap.containsKey(w)) {
-                int idx = idxMap.get(w);
-                cnt[idx]++;
-            }
+            disc.put(discount[i], disc.getOrDefault(discount[i], 0) + 1);
         }
         
-        if (check(cnt)) answer++;
+        if (check()) answer++;
         
-        for (int i = 0; i < discount.length - 10; i++) {
-            if (idxMap.containsKey(discount[i])) {
-                int idx = idxMap.get(discount[i]);
-                cnt[idx]--;
-            }
+        for (int i = 10; i < discount.length; i++) {
+            String prev = discount[i - 10];
+            String curr = discount[i];
             
-            if (idxMap.containsKey(discount[i+10])) {
-                int idx = idxMap.get(discount[i+10]);
-                cnt[idx]++;
-            }
+            if (disc.get(prev) == 1) disc.remove(prev);
+            else disc.put(prev, disc.get(prev) - 1);
             
-            if (check(cnt)) answer++;
+            disc.put(curr, disc.getOrDefault(curr, 0) + 1);
+            
+            if (check()) answer++;
         }
-        
         
         return answer;
     }
     
-    public boolean check(int[] cnt) {
-        for (int i = 0; i < cnt.length; i++) {
-            if (cnt[i] != number[i]) return false;
+    public boolean check() {
+        for (int i = 0; i < want.length; i++) {
+            String obj = want[i];
+            
+            if (!disc.containsKey(obj)) return false;
+            else if (disc.get(obj) < number[i]) return false;
         }
         
         return true;

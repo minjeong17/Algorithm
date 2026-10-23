@@ -14,6 +14,7 @@
 | [0046-permutations](https://github.com/minjeong17/Algorithm/tree/master/0046-permutations) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/minjeong17/Algorithm/tree/master/0056-merge-intervals) |
+| [0079-word-search](https://github.com/minjeong17/Algorithm/tree/master/0079-word-search) |
 | [0128-longest-consecutive-sequence](https://github.com/minjeong17/Algorithm/tree/master/0128-longest-consecutive-sequence) |
 | [0200-number-of-islands](https://github.com/minjeong17/Algorithm/tree/master/0200-number-of-islands) |
 | [0209-minimum-size-subarray-sum](https://github.com/minjeong17/Algorithm/tree/master/0209-minimum-size-subarray-sum) |
@@ -110,6 +111,7 @@
 | [0022-generate-parentheses](https://github.com/minjeong17/Algorithm/tree/master/0022-generate-parentheses) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/minjeong17/Algorithm/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0049-group-anagrams](https://github.com/minjeong17/Algorithm/tree/master/0049-group-anagrams) |
+| [0079-word-search](https://github.com/minjeong17/Algorithm/tree/master/0079-word-search) |
 | [0424-longest-repeating-character-replacement](https://github.com/minjeong17/Algorithm/tree/master/0424-longest-repeating-character-replacement) |
 | [0721-accounts-merge](https://github.com/minjeong17/Algorithm/tree/master/0721-accounts-merge) |
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/minjeong17/Algorithm/tree/master/1190-reverse-substrings-between-each-pair-of-parentheses) |
@@ -211,6 +213,7 @@
 ## Depth-First Search
 |  |
 | ------- |
+| [0079-word-search](https://github.com/minjeong17/Algorithm/tree/master/0079-word-search) |
 | [0200-number-of-islands](https://github.com/minjeong17/Algorithm/tree/master/0200-number-of-islands) |
 | [0207-course-schedule](https://github.com/minjeong17/Algorithm/tree/master/0207-course-schedule) |
 | [0721-accounts-merge](https://github.com/minjeong17/Algorithm/tree/master/0721-accounts-merge) |
@@ -233,6 +236,7 @@
 ## Matrix
 |  |
 | ------- |
+| [0079-word-search](https://github.com/minjeong17/Algorithm/tree/master/0079-word-search) |
 | [0200-number-of-islands](https://github.com/minjeong17/Algorithm/tree/master/0200-number-of-islands) |
 | [0835-image-overlap](https://github.com/minjeong17/Algorithm/tree/master/0835-image-overlap) |
 ## Dynamic Programming
@@ -310,6 +314,7 @@
 | [0017-letter-combinations-of-a-phone-number](https://github.com/minjeong17/Algorithm/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0022-generate-parentheses](https://github.com/minjeong17/Algorithm/tree/master/0022-generate-parentheses) |
 | [0046-permutations](https://github.com/minjeong17/Algorithm/tree/master/0046-permutations) |
+| [0079-word-search](https://github.com/minjeong17/Algorithm/tree/master/0079-word-search) |
 ## Bracket Sequences
 |  |
 | ------- |

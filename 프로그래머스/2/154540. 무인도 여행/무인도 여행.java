@@ -1,74 +1,67 @@
 import java.util.*;
 
 class Solution {
-    
-    int N, M;
+    int n, m;
     char[][] map;
     boolean[][] visited;
-    
     int[] dr = {-1, 1, 0, 0};
     int[] dc = {0, 0, -1, 1};
-    
     public int[] solution(String[] maps) {
+        n = maps.length;
+        m = maps[0].length();
         
-        N = maps.length;
-        M = maps[0].length();
-        
-        map = new char[N][M];
-        visited = new boolean[N][M];
-        for (int i = 0; i < N; i++) {
+        map = new char[n][m];
+        for (int i = 0; i < n; i++) {
             map[i] = maps[i].toCharArray();
-            for (int j = 0; j < M; j++) {
-                if (map[i][j] == 'X') visited[i][j] = true; 
+        }
+        
+        List<Integer> sumList = new ArrayList<>();
+        visited = new boolean[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (map[i][j] != 'X' && !visited[i][j]) {
+                    int sum = bfs(i, j);
+                    if (sum != -1) sumList.add(sum);
+                }
             }
         }
         
-        PriorityQueue<Integer> ans = new PriorityQueue<>();
-        for (int i = 0; i < N; i++) {
-            for (int j = 0; j < M; j++) {
-                if (map[i][j] != 'X' && !visited[i][j]) ans.add(bfs(i, j));
-            }
-        }
+        if (sumList.size() == 0) return new int[] {-1};
         
-        int size = ans.size();
-        int[] answer;
-        if (size == 0) {
-            answer = new int[1];
-            answer[0] = -1;
-        } else {
-            answer = new int[size];
-            for (int i = 0; i < size; i++) {
-                answer[i] = ans.poll();
-            }
+        Collections.sort(sumList);
+        int[] answer = new int[sumList.size()];
+        for (int i = 0; i < answer.length; i++) {
+            answer[i] = sumList.get(i);
         }
         
         return answer;
     }
     
     public int bfs(int r, int c) {
-        Queue<int[]> q = new LinkedList<>();
-        q.add(new int[] {r, c});
+        Queue<int[]> pq = new LinkedList<>();
+        
+        pq.add(new int[] {r, c});
         visited[r][c] = true;
         
         int sum = 0;
-        while (!q.isEmpty()) {
-            int[] curr = q.poll();
-            
-            sum += map[curr[0]][curr[1]] - '0';
+        sum += map[r][c] - '0';
+        
+        while (!pq.isEmpty()) {
+            int[] curr = pq.poll();
             
             for (int d = 0; d < 4; d++) {
                 int nr = curr[0] + dr[d];
                 int nc = curr[1] + dc[d];
                 
-                if (nr < 0 || nr >= N || nc < 0 || nc >= M) continue;
-                if (map[nr][nc] == 'X' || visited[nr][nc]) continue;
+                if (nr < 0 || nr >= n || nc < 0 || nc >= m) continue;
+                if (visited[nr][nc] || map[nr][nc] == 'X') continue;
                 
+                sum += map[nr][nc] - '0';
                 visited[nr][nc] = true;
-                q.add(new int[] {nr, nc});
+                pq.add(new int[] {nr, nc});
             }
-            
         }
         
-        return sum;
+        return sum == 0 ? -1 : sum;
     }
 }

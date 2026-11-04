@@ -2,40 +2,38 @@ import java.util.*;
 
 class Solution {
     public int[] asteroidCollision(int[] asteroids) {
-        Stack<Integer> stack = new Stack<>();
-        stack.push(asteroids[0]);
+        List<Integer> list = new ArrayList<>();
+        list.add(asteroids[0]);
 
-        for (int i = 1; i < asteroids.length; i++) {
-            int curr = asteroids[i];
-            
-            if (stack.isEmpty()) stack.push(curr);
-            else if (stack.peek() < 0) {
-                stack.push(curr);
+        int idx = 1;
+        while (idx < asteroids.length) {
+            int curr = asteroids[idx];
+            if (list.size() == 0) {
+                list.add(curr);
+                idx++;
+                continue;
+            }
+
+            int prev = list.get(list.size() - 1);
+
+            if (curr * prev > 0 || (prev < 0 && curr > 0)) {
+                list.add(curr);
+                idx++;
             } else {
-                if (curr > 0) stack.push(curr);
-                else {
-                    while (!stack.isEmpty() && curr * stack.peek() < 0 && Math.abs(curr) > Math.abs(stack.peek())) {
-                        if (Math.abs(curr) > Math.abs(stack.peek())) {
-                            stack.pop();
-                        }
-                    }
-
-                    if (!stack.isEmpty() && Math.abs(curr) >= Math.abs(stack.peek())) {
-                        if (curr * stack.peek() > 0) stack.push(curr);
-                        else stack.pop();
-                    } else {
-                        if (stack.isEmpty() || (!stack.isEmpty() && curr * stack.peek() > 0)) stack.push(curr);
-                    }
+                if (Math.abs(curr) == Math.abs(prev)) {
+                    list.remove(list.size() - 1);
+                    idx++;
+                } else if (Math.abs(curr) < Math.abs(prev)) {
+                    idx++;
+                } else if (Math.abs(curr) > Math.abs(prev)) {
+                    list.remove(list.size() - 1);
                 }
             }
         }
 
-        int idx = stack.size() - 1;
-        int[] answer = new int[stack.size()];
-        for (int i = idx; i >= 0; i--) {
-            answer[i] = stack.pop();
-        }
-
+        int[] answer = new int[list.size()];
+        for (int i = 0; i < list.size(); i++) answer[i] = list.get(i);
+ 
         return answer;
     }
 }

@@ -1,57 +1,50 @@
 import java.util.*;
 
 class Solution {
-    
+    int n;
     List<Integer>[] adj;
-    boolean[] visited;
-    
     public int solution(int n, int[][] wires) {
+        this.n = n;
         int answer = Integer.MAX_VALUE;
         
         adj = new ArrayList[n+1];
-        for (int i = 1; i <= n; i++) {
-            adj[i] = new ArrayList<>();
+        for (int i = 1; i <= n; i++) adj[i] = new ArrayList<>();
+        
+        for (int[] wire : wires) {
+            adj[wire[0]].add(wire[1]);
+            adj[wire[1]].add(wire[0]);
         }
         
         for (int[] wire : wires) {
-            int from = wire[0];
-            int to = wire[1];
+            int n1 = bfs(wire[0], wire[1]);
+            int n2 = bfs(wire[1], wire[0]);
             
-            adj[from].add(to);
-            adj[to].add(from);
-        }
-        
-        for (int[] wire : wires) {
-            visited = new boolean[n+1];
-            int tmp = count(1, wire[0], wire[1]);
-            answer = Math.min(answer, Math.abs(n-tmp-tmp));
-            if (answer == 0) break;
+            answer = Math.min(answer, Math.abs(n1 - n2));
         }
         
         return answer;
     }
     
-    public int count(int num, int v1, int v2) {
+    public int bfs(int startW, int blockW) {
         Queue<Integer> q = new LinkedList<>();
+        boolean[] visited = new boolean[n+1];
         
-        q.add(num);
-        visited[num] = true;
+        q.add(startW);
+        visited[startW] = true;
         
-        int tmp = 1;
+        int cnt = 0;
         while (!q.isEmpty()) {
             int curr = q.poll();
+            cnt++;
             
-            for (int i : adj[curr]) {
+            for (int n : adj[curr]) {
+                if (visited[n] || n == blockW) continue;
                 
-                if (visited[i]) continue;
-                if ((curr == v1 && i == v2) || (curr == v2 && i == v1)) continue;
-                
-                visited[i] = true;
-                q.add(i);
-                tmp++;
+                visited[n] = true;
+                q.add(n);
             }
         }
         
-        return tmp;
+        return cnt;
     }
 }

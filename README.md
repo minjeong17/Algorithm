@@ -33,6 +33,7 @@
 | [0835-image-overlap](https://github.com/minjeong17/Algorithm/tree/master/0835-image-overlap) |
 | [1386-cinema-seat-allocation](https://github.com/minjeong17/Algorithm/tree/master/1386-cinema-seat-allocation) |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/minjeong17/Algorithm/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
+| [1524-number-of-sub-arrays-with-odd-sum](https://github.com/minjeong17/Algorithm/tree/master/1524-number-of-sub-arrays-with-odd-sum) |
 | [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/minjeong17/Algorithm/tree/master/1807-evaluate-the-bracket-pairs-of-a-string) |
 | [2091-removing-minimum-and-maximum-from-array](https://github.com/minjeong17/Algorithm/tree/master/2091-removing-minimum-and-maximum-from-array) |
 | [2187-minimum-time-to-complete-trips](https://github.com/minjeong17/Algorithm/tree/master/2187-minimum-time-to-complete-trips) |
@@ -91,6 +92,7 @@
 | [0453-minimum-moves-to-equal-array-elements](https://github.com/minjeong17/Algorithm/tree/master/0453-minimum-moves-to-equal-array-elements) |
 | [0462-minimum-moves-to-equal-array-elements-ii](https://github.com/minjeong17/Algorithm/tree/master/0462-minimum-moves-to-equal-array-elements-ii) |
 | [0836-rectangle-overlap](https://github.com/minjeong17/Algorithm/tree/master/0836-rectangle-overlap) |
+| [1524-number-of-sub-arrays-with-odd-sum](https://github.com/minjeong17/Algorithm/tree/master/1524-number-of-sub-arrays-with-odd-sum) |
 | [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/minjeong17/Algorithm/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
 | [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/minjeong17/Algorithm/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
@@ -264,6 +266,7 @@
 | [0022-generate-parentheses](https://github.com/minjeong17/Algorithm/tree/master/0022-generate-parentheses) |
 | [0055-jump-game](https://github.com/minjeong17/Algorithm/tree/master/0055-jump-game) |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/minjeong17/Algorithm/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
+| [1524-number-of-sub-arrays-with-odd-sum](https://github.com/minjeong17/Algorithm/tree/master/1524-number-of-sub-arrays-with-odd-sum) |
 | [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/minjeong17/Algorithm/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
 | [3524-find-x-value-of-array-i](https://github.com/minjeong17/Algorithm/tree/master/3524-find-x-value-of-array-i) |
 ## Manacher
@@ -288,6 +291,7 @@
 | [0238-product-of-array-except-self](https://github.com/minjeong17/Algorithm/tree/master/0238-product-of-array-except-self) |
 | [0525-contiguous-array](https://github.com/minjeong17/Algorithm/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/minjeong17/Algorithm/tree/master/0560-subarray-sum-equals-k) |
+| [1524-number-of-sub-arrays-with-odd-sum](https://github.com/minjeong17/Algorithm/tree/master/1524-number-of-sub-arrays-with-odd-sum) |
 | [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/minjeong17/Algorithm/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
 | [3903-smallest-stable-index-i](https://github.com/minjeong17/Algorithm/tree/master/3903-smallest-stable-index-i) |
 | [3904-smallest-stable-index-ii](https://github.com/minjeong17/Algorithm/tree/master/3904-smallest-stable-index-ii) |

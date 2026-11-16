@@ -131,6 +131,7 @@
 | [1190-reverse-substrings-between-each-pair-of-parentheses](https://github.com/minjeong17/Algorithm/tree/master/1190-reverse-substrings-between-each-pair-of-parentheses) |
 | [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/minjeong17/Algorithm/tree/master/1807-evaluate-the-bracket-pairs-of-a-string) |
 | [1927-sum-game](https://github.com/minjeong17/Algorithm/tree/master/1927-sum-game) |
+| [2243-calculate-digit-sum-of-a-string](https://github.com/minjeong17/Algorithm/tree/master/2243-calculate-digit-sum-of-a-string) |
 | [2904-shortest-and-lexicographically-smallest-beautiful-string](https://github.com/minjeong17/Algorithm/tree/master/2904-shortest-and-lexicographically-smallest-beautiful-string) |
 | [3014-minimum-number-of-pushes-to-type-word-i](https://github.com/minjeong17/Algorithm/tree/master/3014-minimum-number-of-pushes-to-type-word-i) |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/minjeong17/Algorithm/tree/master/3016-minimum-number-of-pushes-to-type-word-ii) |
@@ -283,6 +284,7 @@
 | ------- |
 | [0054-spiral-matrix](https://github.com/minjeong17/Algorithm/tree/master/0054-spiral-matrix) |
 | [0735-asteroid-collision](https://github.com/minjeong17/Algorithm/tree/master/0735-asteroid-collision) |
+| [2243-calculate-digit-sum-of-a-string](https://github.com/minjeong17/Algorithm/tree/master/2243-calculate-digit-sum-of-a-string) |
 | [3069-distribute-elements-into-two-arrays-i](https://github.com/minjeong17/Algorithm/tree/master/3069-distribute-elements-into-two-arrays-i) |
 ## Prefix Sum
 |  |

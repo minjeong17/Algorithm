@@ -4,7 +4,6 @@ class Solution {
     public int numOfSubarrays(int[] arr) {
         int n = arr.length;
         int mod = (int) Math.pow(10, 9) + 7;
-        System.out.println(mod);
 
         int[] sumArr = new int[n];
         sumArr[0] = arr[0];

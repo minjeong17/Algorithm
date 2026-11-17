@@ -1,37 +1,41 @@
-// import java.util.*;
+import java.util.*;
 
 class Solution {
-    
+    int[] diffs, times;
+    long limit;
     public int solution(int[] diffs, int[] times, long limit) {
-        int answer = Integer.MAX_VALUE;
+        this.diffs = diffs;
+        this.times = times;
+        this.limit = limit;
         
         int left = 1;
-        int right = 100000;
-        while (left <= right) {
+        int right = diffs[0];
+        for (int d : diffs) right = Math.max(d, right);
+        while (left < right) {
             int mid = (left + right) / 2;
-            if (calTime(diffs, times, mid, limit)) {
-                answer = Math.min(answer, mid);
-                right = mid - 1;
+            
+            if (check(mid)) {
+                right = mid;
             } else {
                 left = mid + 1;
             }
         }
         
-        return answer;
+        return right;
     }
     
-    public boolean calTime(int[] diffs, int[] times, int lv, long limit) {
-        long total = times[0];
-        
-        for (int i = 1; i < diffs.length; i++) {
-            if (diffs[i] <= lv) total += times[i];
-            else {
-                total += ((diffs[i] - lv) * ((long) (times[i] + times[i-1]))  + times[i]);
+    public boolean check(int level) {
+        long total = 0;
+        for (int i = 0; i < diffs.length; i++) {
+            if (diffs[i] <= level) {
+                total += times[i];
+            } else {
+                total += (long) (diffs[i] - level) * (times[i] + times[i-1]) + times[i];
             }
+            
+            if (total > limit) return false;
         }
         
-        if (total <= limit) return true;
-        else return false;
-        
+        return true;
     }
 }

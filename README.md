@@ -37,6 +37,7 @@
 | [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/minjeong17/Algorithm/tree/master/1807-evaluate-the-bracket-pairs-of-a-string) |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/minjeong17/Algorithm/tree/master/1838-frequency-of-the-most-frequent-element) |
 | [2091-removing-minimum-and-maximum-from-array](https://github.com/minjeong17/Algorithm/tree/master/2091-removing-minimum-and-maximum-from-array) |
+| [2140-solving-questions-with-brainpower](https://github.com/minjeong17/Algorithm/tree/master/2140-solving-questions-with-brainpower) |
 | [2187-minimum-time-to-complete-trips](https://github.com/minjeong17/Algorithm/tree/master/2187-minimum-time-to-complete-trips) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/minjeong17/Algorithm/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
 | [3069-distribute-elements-into-two-arrays-i](https://github.com/minjeong17/Algorithm/tree/master/3069-distribute-elements-into-two-arrays-i) |
@@ -275,6 +276,7 @@
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/minjeong17/Algorithm/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
 | [1524-number-of-sub-arrays-with-odd-sum](https://github.com/minjeong17/Algorithm/tree/master/1524-number-of-sub-arrays-with-odd-sum) |
 | [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/minjeong17/Algorithm/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
+| [2140-solving-questions-with-brainpower](https://github.com/minjeong17/Algorithm/tree/master/2140-solving-questions-with-brainpower) |
 | [3524-find-x-value-of-array-i](https://github.com/minjeong17/Algorithm/tree/master/3524-find-x-value-of-array-i) |
 ## Manacher
 |  |

@@ -34,6 +34,7 @@
 | [1386-cinema-seat-allocation](https://github.com/minjeong17/Algorithm/tree/master/1386-cinema-seat-allocation) |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/minjeong17/Algorithm/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
 | [1524-number-of-sub-arrays-with-odd-sum](https://github.com/minjeong17/Algorithm/tree/master/1524-number-of-sub-arrays-with-odd-sum) |
+| [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/minjeong17/Algorithm/tree/master/1658-minimum-operations-to-reduce-x-to-zero) |
 | [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/minjeong17/Algorithm/tree/master/1807-evaluate-the-bracket-pairs-of-a-string) |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/minjeong17/Algorithm/tree/master/1838-frequency-of-the-most-frequent-element) |
 | [2091-removing-minimum-and-maximum-from-array](https://github.com/minjeong17/Algorithm/tree/master/2091-removing-minimum-and-maximum-from-array) |
@@ -68,6 +69,7 @@
 | [0763-partition-labels](https://github.com/minjeong17/Algorithm/tree/master/0763-partition-labels) |
 | [1386-cinema-seat-allocation](https://github.com/minjeong17/Algorithm/tree/master/1386-cinema-seat-allocation) |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/minjeong17/Algorithm/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
+| [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/minjeong17/Algorithm/tree/master/1658-minimum-operations-to-reduce-x-to-zero) |
 | [1807-evaluate-the-bracket-pairs-of-a-string](https://github.com/minjeong17/Algorithm/tree/master/1807-evaluate-the-bracket-pairs-of-a-string) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/minjeong17/Algorithm/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
 | [3016-minimum-number-of-pushes-to-type-word-ii](https://github.com/minjeong17/Algorithm/tree/master/3016-minimum-number-of-pushes-to-type-word-ii) |
@@ -148,6 +150,7 @@
 | [0209-minimum-size-subarray-sum](https://github.com/minjeong17/Algorithm/tree/master/0209-minimum-size-subarray-sum) |
 | [0424-longest-repeating-character-replacement](https://github.com/minjeong17/Algorithm/tree/master/0424-longest-repeating-character-replacement) |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/minjeong17/Algorithm/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
+| [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/minjeong17/Algorithm/tree/master/1658-minimum-operations-to-reduce-x-to-zero) |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/minjeong17/Algorithm/tree/master/1838-frequency-of-the-most-frequent-element) |
 | [2904-shortest-and-lexicographically-smallest-beautiful-string](https://github.com/minjeong17/Algorithm/tree/master/2904-shortest-and-lexicographically-smallest-beautiful-string) |
 | [2958-length-of-longest-subarray-with-at-most-k-frequency](https://github.com/minjeong17/Algorithm/tree/master/2958-length-of-longest-subarray-with-at-most-k-frequency) |
@@ -158,6 +161,7 @@
 | [0004-median-of-two-sorted-arrays](https://github.com/minjeong17/Algorithm/tree/master/0004-median-of-two-sorted-arrays) |
 | [0209-minimum-size-subarray-sum](https://github.com/minjeong17/Algorithm/tree/master/0209-minimum-size-subarray-sum) |
 | [1477-find-two-non-overlapping-sub-arrays-each-with-target-sum](https://github.com/minjeong17/Algorithm/tree/master/1477-find-two-non-overlapping-sub-arrays-each-with-target-sum) |
+| [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/minjeong17/Algorithm/tree/master/1658-minimum-operations-to-reduce-x-to-zero) |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/minjeong17/Algorithm/tree/master/1838-frequency-of-the-most-frequent-element) |
 | [2187-minimum-time-to-complete-trips](https://github.com/minjeong17/Algorithm/tree/master/2187-minimum-time-to-complete-trips) |
 ## Divide and Conquer
@@ -303,6 +307,7 @@
 | [0560-subarray-sum-equals-k](https://github.com/minjeong17/Algorithm/tree/master/0560-subarray-sum-equals-k) |
 | [1524-number-of-sub-arrays-with-odd-sum](https://github.com/minjeong17/Algorithm/tree/master/1524-number-of-sub-arrays-with-odd-sum) |
 | [1621-number-of-sets-of-k-non-overlapping-line-segments](https://github.com/minjeong17/Algorithm/tree/master/1621-number-of-sets-of-k-non-overlapping-line-segments) |
+| [1658-minimum-operations-to-reduce-x-to-zero](https://github.com/minjeong17/Algorithm/tree/master/1658-minimum-operations-to-reduce-x-to-zero) |
 | [1838-frequency-of-the-most-frequent-element](https://github.com/minjeong17/Algorithm/tree/master/1838-frequency-of-the-most-frequent-element) |
 | [3903-smallest-stable-index-i](https://github.com/minjeong17/Algorithm/tree/master/3903-smallest-stable-index-i) |
 | [3904-smallest-stable-index-ii](https://github.com/minjeong17/Algorithm/tree/master/3904-smallest-stable-index-ii) |

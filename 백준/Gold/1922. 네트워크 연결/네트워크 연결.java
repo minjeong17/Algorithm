@@ -1,59 +1,41 @@
-import java.io.*;
 import java.util.*;
+import java.io.*;
 
 public class Main {
-    
-    static class Edge implements Comparable<Edge> {
-        int from;
-        int to;
-        int weight;
-        
-        public Edge(int from, int to, int weight) {
-            this.from = from;
-            this.to = to;
-            this.weight = weight;
-        }
-        
-        @Override
-        public int compareTo(Edge o) {
-            return Integer.compare(this.weight, o.weight);
-        }
-    }
-    
     static int N;
     static int[] p;
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st;
         
         N = Integer.parseInt(br.readLine());
         int M = Integer.parseInt(br.readLine());
         
-        Edge[] edges = new Edge[M];
+        List<int[]> edges = new ArrayList<>();
         for (int i = 0; i < M; i++) {
-            st = new StringTokenizer(br.readLine());
-            int from = Integer.parseInt(st.nextToken());
-            int to = Integer.parseInt(st.nextToken());
-            int weight = Integer.parseInt(st.nextToken());
+            StringTokenizer st = new StringTokenizer(br.readLine());
             
-            edges[i] = new Edge(from, to, weight);
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            int c = Integer.parseInt(st.nextToken());
+            
+            edges.add(new int[] {a, b, c});
         }
         
-        Arrays.sort(edges);
+        Collections.sort(edges, (o1, o2) -> o1[2] - o2[2]);
         
         makeSet();
         
         int pick = 0;
-        int ans = 0;
-        for (Edge e : edges) {
-            if (unionSet(e.from, e.to)) {
-                ans += e.weight;
+        int answer = 0;
+        for (int[] e : edges) {
+            if (unionSet(e[0], e[1])) {
+                answer += e[2];
                 pick++;
                 if (pick == N-1) break;
-            }
+            } 
         }
         
-        System.out.println(ans);
+        System.out.println(answer);
     }
     
     public static void makeSet() {
